@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "solv-doc",
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

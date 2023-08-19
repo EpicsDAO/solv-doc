@@ -1,0 +1,28 @@
+{
+  "title": "solv Document",
+  "body": "Open-Source Solana Validator Utility Tool",
+  "previousPage": "Previous page",
+  "nextPage": "Next page",
+  "actions": {
+    "motivation": {
+      "title": "Motivation",
+      "body": "Originally, this tool was developed to increase our development team and the entire community's operational efficiency."
+    },
+    "quickstart": {
+      "title": "Quickstart",
+      "body": "Describes the setup for getting started with the \"solv\"."
+    }
+  },
+  "menuNav": {
+    "home": "Docs Home",
+    "general": {
+      "groupTitle": "General",
+      "motivation": "Motivation",
+      "quickstart": "Quickstart"
+    }
+  },
+  "headerNav": {
+    "home": "solv Home",
+    "news": "News"
+  }
+}
