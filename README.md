@@ -59,7 +59,7 @@ operations on the Solana blockchain.
 ```bash
 # Node version (using nodenv)
 $ node -v
-v18.16.0
+v18.17.1
 
 # Install dependencies
 $ yarn install --frozen-lockfile
