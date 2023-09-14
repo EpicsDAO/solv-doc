@@ -13,6 +13,7 @@ import CTASectionRow from '@/components/pages/common/CTASectionRow'
 import MediaLogoRow from '@/components/pages/common/MediaLogoRow'
 import WhyOpenSourceDevelopmentRow from '@/components/pages/common/WhyOpenSourceDevelopment'
 import OurWorksRow from '@/components/pages/common/OurWorksRow'
+import SolvTutorialYouTubeRow from '@/components/pages/common/SolvTutorialYouTubeRow'
 
 const articleDirName = 'news'
 
@@ -37,6 +38,7 @@ export default function Home({
     <>
       <HeroRow />
       <SolvFeaturesRow />
+      <SolvTutorialYouTubeRow />
       <WhyOpenSourceDevelopmentRow />
       <TopNewsRow articles={articles} urls={urls} />
       <MediaLogoRow />

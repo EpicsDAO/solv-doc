@@ -99,5 +99,10 @@
       "title": "Solana Summer Campハッカソン2022において5位入賞しました",
       "description": "Epics DAO は、2022 年 7 月 11 日 - 8 月 16 日に開催された Solana サマーキャンプハッカソンにおいて、18,000 を超える応募の中、 5 位に入賞いたしました。"
     }
+  },
+  "SolvTutorialYouTubeRow": {
+    "title": "Solanaバリデーターを10分で稼働開始",
+    "subtitle": "YouTube チュートリアル",
+    "description": "この動画では、既存のSolana Testnetバリデーターノードの運用をsolvに切り替える方法を詳しく解説しています。Solana Validatorサーバーをsolvを使って効率的に運用するための完全ガイドです。ぜひご覧ください。"
   }
 }

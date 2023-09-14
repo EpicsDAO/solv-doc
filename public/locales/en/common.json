@@ -98,5 +98,10 @@
       "title": "Placed 5th at Solana Summer Camp Hackathon 2022",
       "description": "Epics DAO won 5th place out of over 18,000 entries at the Solana Summer Camp Hackathon held July 11-August 16, 2022."
     }
+  },
+  "SolvTutorialYouTubeRow": {
+    "title": "Start Solana Validator in 10 minutes with solv",
+    "subtitle": "YouTube Tutorial",
+    "description": "We have released a video demonstrating how to transition the operation of an existing Solana Testnet validator node to solv. It's essentially a guide on how to migrate and start your Solana Validator server to use solv."
   }
 }
