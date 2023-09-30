@@ -9,7 +9,9 @@ ELSOUL LABO B.V. (Headquarters: Amsterdam, Netherlands) is pleased to announce t
 
 We have also released a YouTube video that explains the setup process to operational status. Please take a look.
 
-[Start Operating in 10 Minutes] How to Begin with Solana Validators Using solv (YouTube): https://www.youtube.com/watch?v=zdN4yaPkoa0
+[Start Operating in 10 Minutes] How to Begin with Solana Validators Using solv (YouTube):
+
+https://www.youtube.com/watch?v=zdN4yaPkoa0
 
 ## solv - The CLI Tool for Solana Validators
 
