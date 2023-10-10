@@ -32,21 +32,25 @@ Please mount fileSystem that has more than 1TB to `/mt` directory.
 
 Edgevana's Ubuntu AMD Server's default mountpoint is `/dev/vdb`.
 
+For Latitude, you can run without using any options. (`/dev/nvme1n1` is set as the default option.)
+
 unmount if it is mounted to other directory.
 
 ```bash
-$ solv umt <mountedPoint>
+$ solv umt -p <mountedPoint>
 ```
 
 and mount to `/mt` directory.
 
 ```bash
-$ solv mt <fileSystem>
+$ solv mt -p <fileSystem>
 ```
 
 ## Generate Solana Validator Keys and Config
 
-To generate keys and configuration for a Solana validator, use the following command. **If you're participating as a testnet validator, you'll need approximately 500 SOL. Please acquire SOL for the testnet in advance and transfer it to the address in the generated `testnet-validator-keypair.json`.**
+To generate keys and configuration for a Solana validator, use the following command.
+
+_If you're participating as a testnet validator, you'll need approximately 500 Testnet SOL (Free). Please acquire Testnet SOL in advance and transfer it to the address in the generated `testnet-validator-keypair.json`'s pubkey._
 
 (For those participating in TDS, if there's any remaining testnet SOL in the EpicsDAO wallet, we'll provide it. Please join our Discord channel for further details: https://discord.gg/Z8M8rZeX8R)
 
@@ -57,7 +61,7 @@ $ solv setup
 if you haven't setup swap, you can use the following command.
 
 ```bash
-$ solv setup --swap --path <fileSystem>
+$ solv setup --swap -p <fileSystem>
 ```
 
 ## Check Solana Validator Preparation Status
