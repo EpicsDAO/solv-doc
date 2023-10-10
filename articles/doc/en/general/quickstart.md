@@ -44,22 +44,20 @@ and mount to `/mt` directory.
 $ solv mt <fileSystem>
 ```
 
+## Generate Solana Validator Keys and Config
+
+To generate keys and configuration for a Solana validator, use the following command. **If you're participating as a testnet validator, you'll need approximately 500 SOL. Please acquire SOL for the testnet in advance and transfer it to the address in the generated `testnet-validator-keypair.json`.**
+
+(For those participating in TDS, if there's any remaining testnet SOL in the EpicsDAO wallet, we'll provide it. Please join our Discord channel for further details: https://discord.gg/Z8M8rZeX8R)
+
+```bash
+$ solv setup
+```
+
 if you haven't setup swap, you can use the following command.
 
 ```bash
 $ solv setup --swap --path <fileSystem>
-```
-
-## Install/Update Solana Version
-
-```bash
-$ solv i -v 1.16.7
-```
-
-## Generate Solana Validator Keys and Config
-
-```bash
-$ solv setup
 ```
 
 ## Check Solana Validator Preparation Status
@@ -92,7 +90,7 @@ $ solv stop
 $ solv restart
 ```
 
-Default `solana-validator.sh` command is `--no-incremental-snapshots`.
+Default `solana-validator.sh` command is `--no-snapshot-fetch`.
 
 If you want to download snapshot, you can use the following command.
 
@@ -115,20 +113,18 @@ $ solv status
 $ solv log
 ```
 
+or only check Error or Warning logs
+
+```bash
+$ solv log -e
+```
+
 ## Show Solana Validator Config
 
 This command will show your all config paths which are used by solana validator.
 
 ```bash
 $ solv config
-```
-
-## Discord Notification
-
-set `DISCORD_WEBHOOK_URL` in `~/.profile`
-
-```bash
-DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/...your-webhook-url"
 ```
 
 ## Solana Delegation Program

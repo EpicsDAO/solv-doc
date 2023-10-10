@@ -27,34 +27,35 @@ $ sudo apt install solv
 
 Edgevana の Ubuntu AMD サーバーのデフォルトのマウントポイントは/dev/vdb です。
 
+Latitude の場合はオプションを使わずに実行できます。(/dev/nvme1n1 がデフォルトオプションに設定されています。)
+
 もし他のディレクトリにマウントされている場合は、アンマウントしてください。
 
 ```bash
-$ solv umt <mountedPoint>
+$ solv umt -p <mountedPoint>
 ```
 
 そして/mt ディレクトリにマウントしてください。
 
 ```bash
-$ solv mt <fileSystem>
+$ solv mt -p <fileSystem>
+```
+
+## Solana バリデータのキーと設定の生成
+
+Solana のバリデータのキーと設定を生成するには以下のコマンドを使用します。
+**テストネットバリデーターとして投票に参加する場合は、およそ 500 SOL が必要です。あらかじめテストネットの SOL を獲得しておき、生成された `testnet-validator-keypair.json` のアドレスへ送金して下さい。**
+
+(TDS に参加する方は、EpicsDAO のウォレットにテストネットの SOL が残っている場合は差し上げますので、ディスコードチャンネルまでお越し下さい：https://discord.gg/5PPu6hc2EP)
+
+```bash
+$ solv setup
 ```
 
 もしまだ swap を設定していない場合、以下のコマンドを使用できます。
 
 ```bash
-$ solv setup --swap --path <fileSystem>
-```
-
-## Solana バージョンを指定してのインストール/更新
-
-```bash
-$ solv i -v 1.16.7
-```
-
-## Solana バリデータのキーと設定の生成
-
-```bash
-$ solv setup
+$ solv setup --swap -p <fileSystem>
 ```
 
 ## Solana バリデータの準備ステータス確認
@@ -87,7 +88,7 @@ $ solv stop
 $ solv restart
 ```
 
-デフォルトの solana-validator.sh コマンドは--no-incremental-snapshots です。
+デフォルトの solana-validator.sh コマンドは `--no-snapshot-fetch` です。
 
 スナップショットをダウンロードしたい場合は、以下のコマンドを使用します。
 
@@ -109,20 +110,18 @@ $ solv status
 $ solv log
 ```
 
+または エラー/警告のみを表示する場合は以下のコマンドを使用します。
+
+```bash
+$ solv log -e
+```
+
 ## Solana バリデータの設定の表示
 
 このコマンドは solana バリデータで使用されるすべての設定パスを表示します。
 
 ```bash
 $ solv config
-```
-
-## Discord 通知
-
-`~/.profile` に `DISCORD_WEBHOOK_URL` を設定してください。
-
-```bash
-DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/...your-webhook-url"
 ```
 
 ## Solana Delegation プログラム
