@@ -88,7 +88,6 @@ main() {
     install_nodenv_and_node
     install_solana
 
-    cd /home/solv || true
     sudo -u solv bash -c 'source ~/.profile && solv solv'
     su solv
 }
