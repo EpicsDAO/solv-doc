@@ -1,0 +1,71 @@
+#!/bin/sh
+# This script creates a new user 'solv', adds the user to the sudo group,
+# logs in as 'solv', installs nodenv, installs node 18.18.1, sets it as the
+# global version, and installs the @epics-dao/solv2 package globally.
+
+{ # this ensures the entire script is downloaded #
+
+set -e  # exit immediately if a command exits with a non-zero status
+
+usage() {
+    cat 1>&2 <<EOF
+Custom Install Script
+Creates a new user 'solv', adds the user to the sudo group, logs in as 'solv',
+installs nodenv, node 18.18.1, and sets it as the global version.
+Additionally, installs the @epics-dao/solv2 package globally.
+
+USAGE:
+    custom-install-script.sh [FLAGS]
+
+FLAGS:
+    -h, --help              Prints help information
+EOF
+}
+
+main() {
+    for arg in "$@"; do
+      case "$arg" in
+        -h|--help)
+          usage
+          exit 0
+          ;;
+        *)
+          ;;
+      esac
+    done
+
+    echo "Creating user 'solv'..."
+    sudo adduser solv
+    sudo usermod -aG sudo solv
+
+    echo "Logging in as 'solv'..."
+    sudo su - solv <<'EOF_SOLV'
+        echo "Installing nodenv..."
+        git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+        echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.profile
+        echo 'eval "$(nodenv init -)"' >> ~/.profile
+        source ~/.profile
+
+        echo "Installing node-build..."
+        git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
+
+        echo "Installing node 18.18.1..."
+        nodenv install 18.18.1
+        nodenv global 18.18.1
+
+        echo "Installing @epics-dao/solv2..."
+        npm i -g @epics-dao/solv2
+
+        echo "Sourcing ~/.profile..."
+        source ~/.profile
+        
+        echo "Installation completed!"
+EOF_SOLV
+    su solv
+    echo -e "Please run this command below;\n\n\033[32mcd ~ && source ~/.profile\n\n\033[32msolv --help"
+
+}
+
+main "$@"
+
+} # this ensures the entire script is downloaded #
