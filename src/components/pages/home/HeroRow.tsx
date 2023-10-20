@@ -49,7 +49,7 @@ export default function HomeHeroRow() {
                 {t('common:navs.defaultMainNav.doc')}
               </Button>
               <Button
-                href="https://github.com/EpicsDAO/solv"
+                href="https://github.com/EpicsDAO/solv2"
                 variant="outline"
                 className=""
                 target="_blank"

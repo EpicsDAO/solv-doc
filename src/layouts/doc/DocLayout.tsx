@@ -258,7 +258,7 @@ export default function DocLayout({ children }: Props) {
                 <LanguageChanger />
                 <ColorModeChanger />
                 <a
-                  href={`https://github.com/EpicsDAO/solv`}
+                  href={`https://github.com/EpicsDAO/solv2`}
                   className="group text-gray-700 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-200"
                   aria-label="GitHub"
                   target="_blank"
