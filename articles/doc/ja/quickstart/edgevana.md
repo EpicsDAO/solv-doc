@@ -13,7 +13,7 @@ Linux Ubuntu 20.04 TS
 User: solv
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.5.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.5.5/install")"
 $ solv setup
 $ solv start
 ```

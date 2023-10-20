@@ -6,6 +6,7 @@ import linuxLogo from '@/assets/img/logo/projects/Tux.svg'
 import solanaLogo from '@/assets/img/logo/projects/SolanaLogoHorizontal.svg'
 import { Button } from '@/components/common/atoms/Button'
 import clsx from 'clsx'
+import siteConfig from '@/config/site'
 
 export default function HomeHeroRow() {
   const { t } = useTranslation()
@@ -49,7 +50,7 @@ export default function HomeHeroRow() {
                 {t('common:navs.defaultMainNav.doc')}
               </Button>
               <Button
-                href="https://github.com/EpicsDAO/solv2"
+                href={`${siteConfig.githubRepo}`}
                 variant="outline"
                 className=""
                 target="_blank"
