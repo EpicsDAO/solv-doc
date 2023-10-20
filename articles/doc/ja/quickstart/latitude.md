@@ -1,45 +1,26 @@
 ---
-id: general-quickstart
-title: クイックスタート
-description: オープンソースのSolana バリデーター向けツールsolvのクイックスタート
+id: quickstart-latitude
+title: クイックスタート - Latitude
+description: オープンソースのSolana バリデーター向けツールsolvのクイックスタート - Latitude
 ---
 
 solv は Solana ネットワークのバリデータ向けの包括的なコマンドラインユーティリティです。Solana のバリデータの設定、監視、および管理を簡単にし、効率的な操作と高度なパフォーマンスの洞察を提供します。経験豊富な Solana バリデータであっても、初めての方であっても、solv は Solana ブロックチェーン上での最適なバリデータの操作を保証するためのツールを提供します。
 
 ## Solana バリデータのセットアップ
 
-Linux Ubuntu 20.04 TS
+Latitude 社のサーバーにて動作確認済みです。
 
+Linux Ubuntu 20.04 TS
+Linux Ubuntu 22.04 TS
 User: solv
 
 ```bash
-$ sudo adduser solv
-$ sudo usermod -aG sudo solv
-$ su solv
-$ sudo add-apt-repository ppa:epics-dao/solv
-$ sudo apt update
-$ sudo apt install solv
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.0/install")"
+$ solv setup
+$ solv start
 ```
 
 ![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)
-
-1TB 以上のファイルシステムを/mt ディレクトリにマウントしてください。
-
-Edgevana の Ubuntu AMD サーバーのデフォルトのマウントポイントは `/dev/vdb` です。
-
-Latitude の場合はオプションを使わずに実行できます。(`/dev/nvme1n1` がデフォルトオプションに設定されています。)
-
-もし他のディレクトリにマウントされている場合は、アンマウントしてください。
-
-```bash
-$ solv umt -p <mountedPoint>
-```
-
-そして/mt ディレクトリにマウントしてください。
-
-```bash
-$ solv mt -p <fileSystem>
-```
 
 ## Solana バリデータのキーと設定の生成
 
@@ -52,29 +33,20 @@ _テストネットバリデーターとして投票に参加する場合は、�
 $ solv setup
 ```
 
-もしまだ swap を設定していない場合、以下のコマンドを使用できます。
-
-```bash
-$ solv setup --swap -p <fileSystem>
-```
-
-## Solana バリデータの準備ステータス確認
-
-```bash
-$ solv check
-```
-
-準備ができていない場合は以下を確認してください:
-
-マウントされたディスク
-スワップサイズ
-メモリサイズ
-
 ## Solana バリデータの起動
 
 ```bash
 $ solv start
 ```
+
+## Epoch の確認
+
+```bash
+$ solv epoch
+```
+
+このコマンドにより、現在のエポックが表示されます。
+無事に Solana バリデータが起動しました 🎉
 
 ## Solana バリデータの停止
 
@@ -123,10 +95,6 @@ $ solv log -e
 ```bash
 $ solv config
 ```
-
-## Solana Delegation プログラム
-
-https://solana.org/delegation-program
 
 ## solv CLI
 

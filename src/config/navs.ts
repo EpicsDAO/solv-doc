@@ -20,7 +20,7 @@ export const defaultMainNav = [
   },
   {
     name: 'common:navs.defaultMainNav.quickstart',
-    href: '/doc/general/quickstart',
+    href: '/doc/quickstart/latitude',
   },
   {
     name: 'common:navs.defaultMainNav.news',
@@ -39,7 +39,7 @@ export const commonFooterNav = [
   },
   {
     name: 'common:navs.commonFooterNav.quickstart',
-    href: '/doc/general/quickstart',
+    href: '/doc/quickstart/latitude',
   },
   {
     name: 'common:navs.commonFooterNav.news',
@@ -69,9 +69,19 @@ export const docMenuNav = [
         href: '/doc/general/motivation/',
         icon: HeartIcon,
       },
+    ],
+  },
+  {
+    name: 'doc:menuNav.quickstart.groupTitle',
+    children: [
       {
-        name: 'doc:menuNav.general.quickstart',
-        href: '/doc/general/quickstart/',
+        name: 'doc:menuNav.quickstart.latitude',
+        href: '/doc/quickstart/latitude',
+        icon: RocketLaunchIcon,
+      },
+      {
+        name: 'doc:menuNav.quickstart.edgevana',
+        href: '/doc/quickstart/edgevana',
         icon: RocketLaunchIcon,
       },
     ],

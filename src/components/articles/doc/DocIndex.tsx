@@ -20,7 +20,7 @@ const actions = [
   {
     title: 'doc:actions.quickstart.title',
     body: 'doc:actions.quickstart.body',
-    href: '/doc/general/quickstart',
+    href: '/doc/quickstart/latitude',
     icon: RocketLaunchIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',

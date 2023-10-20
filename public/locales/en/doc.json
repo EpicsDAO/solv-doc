@@ -9,7 +9,11 @@
       "body": "Originally, this tool was developed to increase our development team and the entire community's operational efficiency."
     },
     "quickstart": {
-      "title": "Quickstart",
+      "title": "Quickstart - For Latitude",
+      "body": "Describes the setup for getting started with the \"solv\"."
+    },
+    "quickstart-edgevana": {
+      "title": "Quickstart - For Edgevana",
       "body": "Describes the setup for getting started with the \"solv\"."
     }
   },
@@ -19,6 +23,11 @@
       "groupTitle": "General",
       "motivation": "Motivation",
       "quickstart": "Quickstart"
+    },
+    "quickstart": {
+      "groupTitle": "Quickstart",
+      "latitude": "Latitude Server",
+      "edgevana": "Edgevana Server"
     }
   },
   "headerNav": {

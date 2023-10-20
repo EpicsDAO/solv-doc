@@ -9,7 +9,11 @@
       "body": "このツールは元々私たちの開発チーム・コミュニティ全体の運用効率化のために開発されました。"
     },
     "quickstart": {
-      "title": "クイックスタート",
+      "title": "クイックスタート - Latitudeサーバー",
+      "body": "solv を使い始めるための設定について説明します。"
+    },
+    "quickstart-edgevana": {
+      "title": "クイックスタート - Edgevanaサーバー",
       "body": "solv を使い始めるための設定について説明します。"
     }
   },
@@ -19,6 +23,11 @@
       "groupTitle": "全般",
       "motivation": "モチベーション",
       "quickstart": "クイックスタート"
+    },
+    "quickstart": {
+      "groupTitle": "クイックスタート",
+      "latitude": "Latitudeサーバー",
+      "edgevana": "Edgevanaサーバー"
     }
   },
   "headerNav": {

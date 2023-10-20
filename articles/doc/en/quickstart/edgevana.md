@@ -1,7 +1,7 @@
 ---
-id: general-quickstart
-title: Quickstart
-description: Quickstart of solv, an open-source tool for Solana validator
+id: quickstart-edgevana
+title: Quickstart - For Edgevana
+description: Quickstart of solv, an open-source tool for Solana validator for Edgevana
 ---
 
 solv is a comprehensive command-line utility designed for Solana network
@@ -18,12 +18,9 @@ Linux Ubuntu 20.04 TS
 User: solv
 
 ```bash
-$ sudo adduser solv
-$ sudo usermod -aG sudo solv
-$ su solv
-$ sudo add-apt-repository ppa:epics-dao/solv
-$ sudo apt update
-$ sudo apt install solv
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.0/install")"
+$ solv setup
+$ solv start
 ```
 
 ![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)

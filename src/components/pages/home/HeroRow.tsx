@@ -121,16 +121,8 @@ export default function HomeHeroRow() {
               </div>
               <div className="pt-4 text-left font-mono leading-relaxed">
                 <p className="pb-3 text-xs">Linux Ubuntu 20.04 TS</p>
-                $ sudo adduser solv
-                <br />
-                $ sudo usermod -aG sudo solv
-                <br />
-                $ su solv
-                <br />
-                $ sudo add-apt-repository ppa:epics-dao/solv
-                <br />
-                $ sudo apt update
-                <br />$ sudo apt install solv
+                $ solv setup
+                <br />$ solv start
               </div>
             </div>
           </div>
