@@ -27,7 +27,8 @@
     "quickstart": {
       "groupTitle": "Quickstart",
       "latitude": "Latitude Server",
-      "edgevana": "Edgevana Server"
+      "edgevana": "Edgevana Server",
+      "backup": "Backup"
     }
   },
   "headerNav": {
