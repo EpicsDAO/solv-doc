@@ -20,24 +20,6 @@ $ solv start
 
 ![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)
 
-1TB 以上のファイルシステムを/mt ディレクトリにマウントしてください。
-
-Edgevana の Ubuntu AMD サーバーのデフォルトのマウントポイントは `/dev/vdb` です。
-
-Latitude の場合はオプションを使わずに実行できます。(`/dev/nvme1n1` がデフォルトオプションに設定されています。)
-
-もし他のディレクトリにマウントされている場合は、アンマウントしてください。
-
-```bash
-$ solv umt -p <mountedPoint>
-```
-
-そして/mt ディレクトリにマウントしてください。
-
-```bash
-$ solv mt -p <fileSystem>
-```
-
 ## Solana バリデータのキーと設定の生成
 
 Solana のバリデータのキーと設定を生成するには以下のコマンドを使用します。
@@ -48,24 +30,6 @@ _テストネットバリデーターとして投票に参加する場合は、�
 ```bash
 $ solv setup
 ```
-
-もしまだ swap を設定していない場合、以下のコマンドを使用できます。
-
-```bash
-$ solv setup --swap -p <fileSystem>
-```
-
-## Solana バリデータの準備ステータス確認
-
-```bash
-$ solv check
-```
-
-準備ができていない場合は以下を確認してください:
-
-マウントされたディスク
-スワップサイズ
-メモリサイズ
 
 ## Solana バリデータの起動
 
@@ -85,7 +49,7 @@ $ solv stop
 $ solv restart
 ```
 
-デフォルトの solana-validator.sh コマンドは `--no-snapshot-fetch` です。
+デフォルトの solana-validator.sh コマンドは `--no-incremental-snapshots` です。
 
 スナップショットをダウンロードしたい場合は、以下のコマンドを使用します。
 
@@ -93,7 +57,7 @@ $ solv restart
 $ solv restart --snapshot
 ```
 
-このコマンドは自動的に`--no-incremental-snapshots` をあなたの `solana-validator.sh` コマンドに追加します。
+このコマンドは自動的に`--no-incremental-snapshots` を削除し、`--no-genesis-fetch` と`--no-snapshot-fetch` をあなたの`solana-validator.sh` コマンドに追加します。
 
 ## Solana バリデータのステータス
 

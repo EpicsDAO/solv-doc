@@ -60,7 +60,7 @@ $ solv stop
 $ solv restart
 ```
 
-デフォルトの solana-validator.sh コマンドは `--no-snapshot-fetch` です。
+デフォルトの solana-validator.sh コマンドは `--no-incremental-snapshots` です。
 
 スナップショットをダウンロードしたい場合は、以下のコマンドを使用します。
 
@@ -68,7 +68,7 @@ $ solv restart
 $ solv restart --snapshot
 ```
 
-このコマンドは自動的に`--no-incremental-snapshots` をあなたの `solana-validator.sh` コマンドに追加します。
+このコマンドは自動的に`--no-incremental-snapshots` を削除し、`--no-genesis-fetch` と`--no-snapshot-fetch` をあなたの`solana-validator.sh` コマンドに追加します。
 
 ## Solana バリデータのステータス
 

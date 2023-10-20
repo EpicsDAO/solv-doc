@@ -13,7 +13,7 @@ operations on the Solana blockchain.
 
 ## Solana Validator Setup
 
-Linux Ubuntu 20.04 TS
+Linux Ubuntu 20.04 TS - Edgevana
 
 User: solv
 
@@ -24,24 +24,6 @@ $ solv start
 ```
 
 ![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)
-
-Please mount fileSystem that has more than 1TB to `/mt` directory.
-
-Edgevana's Ubuntu AMD Server's default mountpoint is `/dev/vdb`.
-
-For Latitude, you can run without using any options. (`/dev/nvme1n1` is set as the default option.)
-
-unmount if it is mounted to other directory.
-
-```bash
-$ solv umt -p <mountedPoint>
-```
-
-and mount to `/mt` directory.
-
-```bash
-$ solv mt -p <fileSystem>
-```
 
 ## Generate Solana Validator Keys and Config
 
@@ -54,24 +36,6 @@ _If you're participating as a testnet validator, you'll need approximately 500 T
 ```bash
 $ solv setup
 ```
-
-if you haven't setup swap, you can use the following command.
-
-```bash
-$ solv setup --swap -p <fileSystem>
-```
-
-## Check Solana Validator Preparation Status
-
-```bash
-$ solv check
-```
-
-If it is not ready, you can check;
-
-- Mounted disk
-- Swap size
-- Memory size
 
 ## Start Solana Validator
 
@@ -91,7 +55,7 @@ $ solv stop
 $ solv restart
 ```
 
-Default `solana-validator.sh` command is `--no-snapshot-fetch`.
+Default `solana-validator.sh` command is `--no-incremental-snapshots`.
 
 If you want to download snapshot, you can use the following command.
 
@@ -99,8 +63,7 @@ If you want to download snapshot, you can use the following command.
 $ solv restart --snapshot
 ```
 
-This command will automatically add `--no-incremental-snapshots` to your
-`solana-validator.sh` command.
+This command will automatically remove `--no-incremental-snapshots` and add `--no-genesis-fetch`, `--no-snapshot-fetch` to your`solana-validator.sh` command.
 
 ## Solana Validator Status
 

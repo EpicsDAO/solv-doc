@@ -67,7 +67,7 @@ $ solv stop
 $ solv restart
 ```
 
-Default `solana-validator.sh` command is `--no-snapshot-fetch`.
+Default `solana-validator.sh` command is `--no-incremental-snapshots`.
 
 If you want to download snapshot, you can use the following command.
 
@@ -75,8 +75,7 @@ If you want to download snapshot, you can use the following command.
 $ solv restart --snapshot
 ```
 
-This command will automatically add `--no-incremental-snapshots` to your
-`solana-validator.sh` command.
+This command will automatically remove `--no-incremental-snapshots` and add `--no-genesis-fetch`, `--no-snapshot-fetch` to your`solana-validator.sh` command.
 
 ## Solana Validator Status
 
