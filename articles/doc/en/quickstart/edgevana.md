@@ -18,7 +18,7 @@ Linux Ubuntu 20.04 TS
 User: solv
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.5.0/install")"
 $ solv setup
 $ solv start
 ```
