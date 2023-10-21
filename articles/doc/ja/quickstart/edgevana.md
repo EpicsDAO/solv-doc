@@ -14,8 +14,8 @@ User: solv
 
 ```bash
 $ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.5.6/install")"
+$ cd ~ && source ~/.profile
 $ solv setup
-$ solv start
 ```
 
 ![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)
