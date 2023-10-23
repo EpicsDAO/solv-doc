@@ -9,6 +9,10 @@
   "closeMenu": "Close menu",
   "copy": "Copy",
   "copied": "Copied!",
+  "solvInstall": "Install solv",
+  "updateSettings": "Update settings",
+  "setupSolv": "Setup Solana Validator",
+  "thatsIt": "That's it!",
   "navs": {
     "defaultMainNav": {
       "quickstart": "Quickstart",
