@@ -12,7 +12,7 @@
   "solvInstall": "Install solv",
   "updateSettings": "Update settings",
   "setupSolv": "Setup Solana Validator",
-  "thatsIt": "That's it!",
+  "thatsAll": "That's all!",
   "navs": {
     "defaultMainNav": {
       "quickstart": "Quickstart",

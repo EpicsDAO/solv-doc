@@ -12,7 +12,7 @@
   "solvInstall": "solvのインストール",
   "updateSettings": "設定の更新",
   "setupSolv": "Solana バリデーターセットアップ",
-  "thatsIt": "完了!",
+  "thatsAll": "完了!",
   "navs": {
     "defaultMainNav": {
       "quickstart": "クイックスタート",
