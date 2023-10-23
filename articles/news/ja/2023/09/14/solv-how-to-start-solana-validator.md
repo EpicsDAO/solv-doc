@@ -11,7 +11,7 @@ ELSOUL LABO B.V. (エルソウルラボ, 本社: オランダ・アムステル�
 
 【10 分で稼働開始】solv を使った Solana バリデーターのはじめかた (YouTube):
 
-https://www.youtube.com/watch?v=pifpTI96398
+https://www.youtube.com/watch?v=lhRGuzCBIo0
 
 ## solv - Solana バリデーター CLI ツール
 
