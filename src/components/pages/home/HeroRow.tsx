@@ -1,8 +1,6 @@
 import Container from '@/components/common/atoms/Container'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
-import ubuntuLogo from '@/assets/img/logo/projects/Ubuntu.svg'
-import linuxLogo from '@/assets/img/logo/projects/Tux.svg'
 import solanaLogo from '@/assets/img/logo/projects/SolanaLogoHorizontal.svg'
 import { Button } from '@/components/common/atoms/Button'
 import clsx from 'clsx'
@@ -112,7 +110,7 @@ export default function HomeHeroRow() {
             </div>
             <ul
               role="list"
-              className="mt-12 flex flex-col items-center justify-center gap-x-8 gap-y-10 sm:gap-x-0 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+              className="mt-12 flex flex-col items-center justify-start gap-x-8 gap-y-10 sm:gap-x-0 xl:flex-row xl:gap-x-12 xl:gap-y-0"
             >
               {[
                 [
@@ -120,18 +118,6 @@ export default function HomeHeroRow() {
                     name: 'Solana',
                     logo: solanaLogo,
                     link: 'https://solana.com/',
-                  },
-
-                  {
-                    name: 'Linux',
-                    logo: linuxLogo,
-                    link: 'https://www.linux.org/',
-                  },
-
-                  {
-                    name: 'Ubuntu',
-                    logo: ubuntuLogo,
-                    link: 'https://ubuntu.com/',
                   },
                   {
                     name: 'Latitude',
