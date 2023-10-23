@@ -14,6 +14,7 @@ import MediaLogoRow from '@/components/pages/common/MediaLogoRow'
 import WhyOpenSourceDevelopmentRow from '@/components/pages/common/WhyOpenSourceDevelopment'
 import OurWorksRow from '@/components/pages/common/OurWorksRow'
 import SolvTutorialYouTubeRow from '@/components/pages/common/SolvTutorialYouTubeRow'
+import SolanaBreakpointSideEventRow from '@/components/pages/common/SolanaBreakpointSideEventRow'
 
 const articleDirName = 'news'
 
@@ -37,6 +38,7 @@ export default function Home({
   return (
     <>
       <HeroRow />
+      <SolanaBreakpointSideEventRow />
       <SolvFeaturesRow />
       <SolvTutorialYouTubeRow />
       <WhyOpenSourceDevelopmentRow />

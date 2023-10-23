@@ -104,8 +104,13 @@
     }
   },
   "SolvTutorialYouTubeRow": {
-    "title": "Start Solana Validator in 10 minutes with solv",
+    "title": "Start Solana Validator in minutes with solv",
     "subtitle": "YouTube Tutorial",
-    "description": "We have released a video demonstrating how to transition the operation of an existing Solana Testnet validator node to solv. It's essentially a guide on how to migrate and start your Solana Validator server to use solv."
+    "description": "We have released a video demonstrating how to start Solana Testnet validator node on Latitude with high performance in minutes. "
+  },
+  "SolanaBreakpointSideEventRow": {
+    "title": "Solana Validator Hands-On Workshop",
+    "description": "Join us to explore the realm of Solana Validators! This beginner-friendly workshop allows you to launch a Solana Validator using Latitude's cloud servers. Validators process transactions and secure the network, earning rewards. You'll get hands-on experience, unraveling the operational essence of validators while enjoying event-exclusive free credits. It's a chance to learn, interact, and dive into the incentivized world of Solana Validators. Looking forward to engaging in discussions. See you there!",
+    "link": "Event Detail"
   }
 }
