@@ -277,7 +277,7 @@ export default function HomeHeroRow() {
                     <div className="mb-3 mt-4 flex items-baseline">
                       <span className="mr-4 text-4xl font-bold">...</span>
                       <div>
-                        <h2 className="text-2xl font-bold">{t('thatsIt')}</h2>
+                        <h2 className="text-2xl font-bold">{t('thatsAll')}</h2>
                       </div>
                     </div>
                   </Tab.Panel>
