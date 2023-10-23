@@ -14,15 +14,13 @@ import { Tab } from '@headlessui/react'
 const providerList = [
   {
     name: 'Latitude',
-    command1:
-      'sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.2/install")"',
+    command1: `sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/${siteConfig.solv2Version}/install")"`,
     command2: 'cd ~ && source ~/.profile',
     command3: 'solv setup',
   },
   {
     name: 'EDGEVANA',
-    command1:
-      'sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.5.6/install")"',
+    command1: `sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/${siteConfig.solvVersion}/install")"`,
     command2: 'cd ~ && source ~/.profile',
     command3: 'solv setup',
   },
