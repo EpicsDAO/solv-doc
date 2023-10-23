@@ -18,7 +18,7 @@ $ cd ~ && source ~/.profile
 $ solv setup
 ```
 
-![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)
+![solv](https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif)
 
 ## Solana バリデータのキーと設定の生成
 

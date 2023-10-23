@@ -25,7 +25,7 @@ $ cd ~ && source ~/.profile
 $ solv setup
 ```
 
-![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)
+![solv](https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif)
 
 ## Generate Solana Validator Keys and Config
 

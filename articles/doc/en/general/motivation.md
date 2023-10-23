@@ -24,6 +24,6 @@ Users of solv can easily conduct many settings and updates with a single command
 
 Technically knowledgeable open-source communities are encouraged to participate as validators. However, not all developers are familiar with a specific blockchain, so there remains a substantial barrier to entry. solv aims to lower this barrier, enabling more open-source developers to earn rewards as validators and promote a sustainable open-source development environment.
 
-![solv](https://storage.googleapis.com/epics-bucket/Validator/apt-install-solv.gif)
+![solv](https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif)
 
 Originally, this tool was developed to increase our development team and the entire community's operational efficiency. However, we believe it holds significant value for the entire Solana validator and Solana community, as well as all open-source development communities. Therefore, we've made solv open-source and freely available for all users. We encourage everyone to give it a try.
