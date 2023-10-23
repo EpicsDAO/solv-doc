@@ -18,7 +18,7 @@ Linux Ubuntu 20.04 TS - Edgevana
 User: solv
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.5.6/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.5.7/install")"
 $ cd ~ && source ~/.profile
 $ solv setup
 ```
