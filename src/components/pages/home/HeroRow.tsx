@@ -10,6 +10,7 @@ import siteConfig from '@/config/site'
 import { useCallback, useState } from 'react'
 import { copyToClipboard } from '@/utils/userAction'
 import { Tab } from '@headlessui/react'
+import latitudeLogo from '@/assets/img/logo/partners/Latitude/latitudesh-logotype-dark.svg'
 
 const providerList = [
   {
@@ -131,6 +132,11 @@ export default function HomeHeroRow() {
                     name: 'Ubuntu',
                     logo: ubuntuLogo,
                     link: 'https://ubuntu.com/',
+                  },
+                  {
+                    name: 'Latitude',
+                    logo: latitudeLogo,
+                    link: 'https://www.latitude.sh/',
                   },
                 ],
               ].map((group, groupIndex) => (
