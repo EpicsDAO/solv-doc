@@ -11,6 +11,19 @@ performance insights. Whether you're a seasoned Solana validator or just
 getting started, solv provides the tools you need to ensure optimal validator
 operations on the Solana blockchain.
 
+## Get $100 Credit for Latitude Server
+
+We are offering a $100 coupon for Latitude servers.
+This coupon can be used to get $100 worth of free credits when setting up a Solana validator using solv.
+
+To use this coupon, please register with Latitude using the link below.
+
+[https://latitude.sh](https://latitude.sh?elsoul=solv2)
+
+Please add the following coupon code to the coupon input field in the settings.
+
+Code： ELSOUL100
+
 ## Solana Validator Setup
 
 Latitude's Ubuntu AMD Server is tested.
