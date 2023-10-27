@@ -11,26 +11,40 @@ performance insights. Whether you're a seasoned Solana validator or just
 getting started, solv provides the tools you need to ensure optimal validator
 operations on the Solana blockchain.
 
-## Get $100 Credit for Latitude Server
+## 🎁 Solana Validator Trial Campaign
 
-We are offering a $100 coupon for Latitude servers.
-This coupon can be used to get $100 worth of free credits when setting up a Solana validator using solv.
+solv, in partnership with Latitude, is offering a $100 coupon 🎉
 
-To use this coupon, please register with Latitude using the link below.
+By utilizing this coupon, you can obtain $100 in free credits when setting up a Solana validator using solv.
 
+Please add the following coupon code from the admin panel 👷‍♀️
+
+​【$100 Coupon Code: ELSOUL100】
+
+🖥️ Bare Metal Server - Latitude.sh:
 [https://latitude.sh](https://latitude.sh?elsoul=solv2)
 
-Please add the following coupon code to the coupon input field in the settings.
+## 🔴 YouTube Video
 
-Code： ELSOUL100
+https://youtu.be/rY4bajhRJgw
+
+## 📖 Server Spec
+
+Tested on the following servers:
+
+Metal server: c3.large.x86
+
+- 24 Cores
+- 2.8 5GHz
+- 256GB RAM
+- 2 x 1.9TB NVME
+
+Server OS:
+
+- Linux Ubuntu 20.04 TS
+- Linux Ubuntu 22.04 TS
 
 ## Solana Validator Setup
-
-Latitude's Ubuntu AMD Server is tested.
-
-Linux Ubuntu 20.04 TS
-Linux Ubuntu 22.04 TS
-User: solv
 
 ```bash
 $ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.3/install")"
@@ -151,3 +165,8 @@ Commands:
   release|r [options] <version>         publish release
   help [command]                        display help for command
 ```
+
+## EpicsDAO Discord Channel
+
+EpicsDAO Discord channel:
+[https://discord.gg/3rxK8CPxwr](https://discord.gg/3rxK8CPxwr)
