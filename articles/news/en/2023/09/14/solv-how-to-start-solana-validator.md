@@ -11,7 +11,7 @@ We have also released a YouTube video that explains the setup process to operati
 
 [Start Operating in 10 Minutes] How to Begin with Solana Validators Using solv (YouTube):
 
-https://www.youtube.com/watch?v=pifpTI96398
+https://www.youtube.com/watch?v=rY4bajhRJgw
 
 ## solv - The CLI Tool for Solana Validators
 
