@@ -6,6 +6,8 @@ description: オープンソースのSolana バリデーター向けツールsol
 
 solv は Solana ネットワークのバリデータ向けの包括的なコマンドラインユーティリティです。Solana のバリデータの設定、監視、および管理を簡単にし、効率的な操作と高度なパフォーマンスの洞察を提供します。経験豊富な Solana バリデータであっても、初めての方であっても、solv は Solana ブロックチェーン上での最適なバリデータの操作を保証するためのツールを提供します。
 
+https://www.youtube.com/watch?v=lhRGuzCBIo0
+
 ## Solana バリデータのセットアップ
 
 Linux Ubuntu 20.04 TS
