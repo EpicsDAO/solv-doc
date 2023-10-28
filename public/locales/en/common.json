@@ -104,9 +104,9 @@
     }
   },
   "SolvTutorialYouTubeRow": {
-    "title": "Start Solana Validator in minutes with solv",
+    "title": "Easily Launch a Solana Validator in 3 Simple Steps 🚀",
     "subtitle": "YouTube Tutorial",
-    "description": "We have released a video demonstrating how to start Solana Testnet validator node on Latitude with high performance in minutes. "
+    "description": "This tutorial video introduces the process of easily setting up a Solana validator using solv. Utilizing the Latitude Cloud Bare Metal Server, the validator setup is completed in just 3 steps. Additionally, through our partnership with Latitude, we explain how you can try solv firsthand using the provided $100 credit coupon."
   },
   "SolanaBreakpointSideEventRow": {
     "title": "Solana Validator Hands-On Workshop",

@@ -105,9 +105,9 @@
     }
   },
   "SolvTutorialYouTubeRow": {
-    "title": "Solanaバリデーターを10分で稼働開始",
+    "title": "簡単3ステップでSolanaバリデーターを立ち上げ 🚀",
     "subtitle": "YouTube チュートリアル",
-    "description": "この動画では、既存のSolana Testnetバリデーターノードの運用をsolvに切り替える方法を詳しく解説しています。Solana Validatorサーバーをsolvを使って効率的に運用するための完全ガイドです。ぜひご覧ください。"
+    "description": "このチュートリアル動画では、solvを利用して簡単にSolanaバリデーターを立ち上げるプロセスを紹介します。Latitudeクラウドベアメタルサーバーを使用し、わずか3ステップでバリデーターを設定が完了します。また、Latitudeとのパートナーシップを通じて提供される$100のクレジットクーポンを利用して、実際にお手元でsolvをお試しいただく方法についても説明します。"
   },
   "SolanaBreakpointSideEventRow": {
     "title": "Solana バリデーターハンズオン",
