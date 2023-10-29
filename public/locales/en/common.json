@@ -112,5 +112,12 @@
     "title": "Solana Validator Hands-On Workshop",
     "description": "Join us to explore the realm of Solana Validators! This beginner-friendly workshop allows you to launch a Solana Validator using Latitude's cloud servers. Validators process transactions and secure the network, earning rewards. You'll get hands-on experience, unraveling the operational essence of validators while enjoying event-exclusive free credits. It's a chance to learn, interact, and dive into the incentivized world of Solana Validators. Looking forward to engaging in discussions. See you there!",
     "link": "Event Detail"
+  },
+  "LatitudeCouponRow": {
+    "subtitle": "Try it now on Bare Metal Cloud",
+    "title": "Latitude Trial Credit Coupon",
+    "description": "Through our partnership with Latitude, we are now able to offer a $100 credit coupon. By utilizing this coupon, you can actually try out launching a Solana validator with solv2 at hand right now.",
+    "register": "Register Coupon",
+    "couponCode": "Coupon Code"
   }
 }

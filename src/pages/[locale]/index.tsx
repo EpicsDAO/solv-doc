@@ -15,6 +15,7 @@ import WhyOpenSourceDevelopmentRow from '@/components/pages/common/WhyOpenSource
 import OurWorksRow from '@/components/pages/common/OurWorksRow'
 import SolvTutorialYouTubeRow from '@/components/pages/common/SolvTutorialYouTubeRow'
 import SolanaBreakpointSideEventRow from '@/components/pages/common/SolanaBreakpointSideEventRow'
+import LatitudeCouponRow from '@/components/pages/common/LatitudeCouponRow'
 
 const articleDirName = 'news'
 
@@ -40,6 +41,7 @@ export default function Home({
       <HeroRow />
       <SolanaBreakpointSideEventRow />
       <SolvFeaturesRow />
+      <LatitudeCouponRow />
       <SolvTutorialYouTubeRow />
       <WhyOpenSourceDevelopmentRow />
       <TopNewsRow articles={articles} urls={urls} />
