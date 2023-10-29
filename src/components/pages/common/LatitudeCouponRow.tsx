@@ -1,15 +1,12 @@
-import YouTubeEmbed from '@/components/utils/YouTubeEmbed'
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { useTranslation } from 'next-i18next'
-import clsx from 'clsx'
 
 import Image from 'next/image'
 import { Button } from '@/components/common/atoms/Button'
 import { copyToClipboard } from '@/utils/userAction'
 
 export default function LatitudeCouponRow() {
-  const { t, i18n } = useTranslation()
-  const isJapanese = useMemo(() => i18n.language === 'ja', [i18n])
+  const { t } = useTranslation()
 
   const [copyText1, setCopyText1] = useState('common:copy')
 
