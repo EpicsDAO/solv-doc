@@ -13,6 +13,8 @@ operations on the Solana blockchain.
 
 ## 🎁 Solana Validator Trial Campaign
 
+![Latitude Coupon](https://storage.googleapis.com/epics-bucket/Validator/LatitudeCoupon.png)
+
 solv, in partnership with Latitude, is offering a $100 coupon 🎉
 
 By utilizing this coupon, you can obtain $100 in free credits when setting up a Solana validator using solv.

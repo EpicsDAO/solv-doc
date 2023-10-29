@@ -33,7 +33,7 @@ export default function SolvFeaturesRow() {
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:ml-auto">
               <div className="lg:max-w-lg">
-                <h2 className="bg-gradient-to-tl from-green-500 via-blue-400 to-purple-400 bg-clip-text text-base font-semibold leading-7 text-transparent">
+                <h2 className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-base font-semibold leading-7 text-transparent">
                   {t('home:SolvFeaturesRow.subtitle')}
                 </h2>
                 <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">

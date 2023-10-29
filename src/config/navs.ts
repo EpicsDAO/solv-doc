@@ -24,6 +24,10 @@ export const defaultMainNav = [
     href: '/doc/quickstart/latitude',
   },
   {
+    name: 'common:navs.defaultMainNav.enterprise',
+    href: '/enterprise',
+  },
+  {
     name: 'common:navs.defaultMainNav.news',
     href: '/news/',
   },
@@ -41,6 +45,10 @@ export const commonFooterNav = [
   {
     name: 'common:navs.commonFooterNav.quickstart',
     href: '/doc/quickstart/latitude',
+  },
+  {
+    name: 'common:navs.commonFooterNav.enterprise',
+    href: '/enterprise',
   },
   {
     name: 'common:navs.commonFooterNav.news',

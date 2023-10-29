@@ -8,6 +8,8 @@ solv は Solana ネットワークのバリデータ向けの包括的なコマ�
 
 ## 🎁 Solana バリデーター トライアルキャンペーン
 
+![Latitude Coupon](https://storage.googleapis.com/epics-bucket/Validator/LatitudeCoupon.png)
+
 solv は、Latitude とのパートナーシップにより、$100 クーポンを提供しています。
 このクーポンを利用することで、solv を使用して Solana バリデーターをセットアップする際に、$100 分の無料クレジットを獲得することができます。
 以下のクーポンコードを管理画面から追加してください 👷‍♀️
