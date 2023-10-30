@@ -59,7 +59,7 @@ export default function LatitudeCouponRow() {
               </div>
               <div className="mt-12 flex gap-x-6">
                 <Button
-                  href="https://latitude.sh/"
+                  href="https://www.latitude.sh/dashboard/signup"
                   target="_blank"
                   rel="noopener noreferrer"
                   className=""
@@ -71,7 +71,7 @@ export default function LatitudeCouponRow() {
             <div className="sm:px-6 lg:px-0">
               <div className="shadow-2xl">
                 <a
-                  href="https://latitude.sh/"
+                  href="https://www.latitude.sh/dashboard/signup"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
