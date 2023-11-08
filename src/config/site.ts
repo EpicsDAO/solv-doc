@@ -16,7 +16,7 @@ const siteConfig = {
   instagramAccount: 'epics.dao',
   githubAccount: 'EpicsDAO',
   githubRepo: 'https://github.com/EpicsDAO/solv2',
-  solvVersion: 'v1.6.0',
+  solvVersion: 'v1.6.2',
   solv2Version: 'v2.1.6',
   discordInvitationLink: 'https://discord.gg/GmHYfyRamx',
   contactFormJA: 'https://forms.gle/A9ysqtqhTgmcukMD9',
