@@ -94,7 +94,7 @@ cd functions/skeet && npx ts-node -r tsconfig-paths/register --transpile-only sr
 
 Upon checking Firebase's Firestore, the data has been successfully created 🎉
 
-![](https://storage.googleapis.com/zenn-user-upload/bd7e20abeb4b-20231123.png)
+![](https://storage.googleapis.com/epics-bucket/solv2/solv-wallet.png)
 
 ## 🔄 Updating StakeMonitor
 
@@ -223,7 +223,7 @@ Similarly, when executed from the Scheduler:
 
 ![](https://storage.googleapis.com/zenn-user-upload/8588406d71be-20231123.png)
 
-![](https://storage.googleapis.com/zenn-user-upload/5898f8b4463a-20231123.png)
+![](https://storage.googleapis.com/epics-bucket/solv2/solv-firestore-epoch.png)
 
 ![](https://storage.googleapis.com/zenn-user-upload/24fe5c9f6e22-20231123.png)
 

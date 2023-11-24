@@ -93,9 +93,29 @@ export const docMenuNav = [
         href: '/doc/quickstart/edgevana',
         icon: RocketLaunchIcon,
       },
+    ],
+  },
+  {
+    name: 'doc:menuNav.tutorial.groupTitle',
+    children: [
       {
-        name: 'doc:menuNav.quickstart.backup',
-        href: '/doc/quickstart/backup',
+        name: 'doc:menuNav.tutorial.chapter1',
+        href: '/doc/tutorial/chapter1',
+        icon: RocketLaunchIcon,
+      },
+      {
+        name: 'doc:menuNav.tutorial.chapter2',
+        href: '/doc/tutorial/chapter2',
+        icon: RocketLaunchIcon,
+      },
+      {
+        name: 'doc:menuNav.tutorial.chapter3',
+        href: '/doc/tutorial/chapter3',
+        icon: ShieldCheckIcon,
+      },
+      {
+        name: 'doc:menuNav.tutorial.chapter4',
+        href: '/doc/tutorial/chapter4',
         icon: ShieldCheckIcon,
       },
     ],

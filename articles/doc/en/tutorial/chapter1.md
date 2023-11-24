@@ -1,8 +1,18 @@
 ---
 id: chapter1
 title: 'Chapter 1: 🚀 The Complete Guide to Solana Validators — Setting Up from Scratch, Efficient Node Startup Techniques 🛠️'
-description: In the world of cutting-edge technology like blockchain, the pace of evolution is fast, and documentation often struggles to keep up.
+description: In this chapter, we take the first steps towards success as a Solana validator. Centering around an innovative open-source tool named solv, we’ll thoroughly explain the entire process of setting up and operating a Solana validator node. solv simplifies complex processes, enabling efficient node setup and operation.
 ---
+
+In this chapter, we take the first steps towards success as a Solana validator. Centering around an innovative open-source tool named solv, we’ll thoroughly explain the entire process of setting up and operating a Solana validator node. solv simplifies complex processes, enabling efficient node setup and operation.
+
+First, we’ll learn about the recommended environment settings for Solana validators. Next, we introduce how to install solv CLI and explain how to create the necessary keys for a Solana validator. We also touch upon the rewards for validators in the Solana Testnet and preparing SOL for use in the testnet.
+
+The content of this chapter includes concrete steps starting from how to connect to the server, install solv, update settings, and finally set up solv. We also provide guidance on how to check real logs, download snapshots, and guide you to solv hands-on videos on YouTube. Through this chapter, you will acquire the knowledge and tools needed to confidently embark on your journey as a Solana validator.
+
+📗 Official solv Documentation:
+
+https://solv.epics.dev/en
 
 ## 🌌 Background
 

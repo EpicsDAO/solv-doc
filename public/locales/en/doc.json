@@ -27,8 +27,14 @@
     "quickstart": {
       "groupTitle": "Quickstart",
       "latitude": "Latitude Server",
-      "edgevana": "Edgevana Server",
-      "backup": "Backup"
+      "edgevana": "Edgevana Server"
+    },
+    "tutorial": {
+      "groupTitle": "Tutorial",
+      "chapter1": "Chapter 1: 🚀 The Complete Guide to Solana Validators — Setting Up from Scratch, Efficient Node Startup Techniques 🛠️",
+      "chapter2": "Chapter 2: 🔐🚚 The Complete Guide to Security and Transfer — Safe Backup, Exchange, and Regular Update of Secret Keys 💼",
+      "chapter3": "Chapter 3: 🌐💰 The Full Scope of Cloud Utilization: Efficient Monitoring of Solana Validators and Management of Staking Rewards 🚀🔍",
+      "chapter4": "Chapter 4: 📊🔥 Utilizing Firestore and Google Spreadsheets for Revenue Management — A Guide to Efficient Data Tracking and Analysis 📈"
     }
   },
   "headerNav": {

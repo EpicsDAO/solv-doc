@@ -27,8 +27,14 @@
     "quickstart": {
       "groupTitle": "クイックスタート",
       "latitude": "Latitudeサーバー",
-      "edgevana": "Edgevanaサーバー",
-      "backup": "バックアップ"
+      "edgevana": "Edgevanaサーバー"
+    },
+    "tutorial": {
+      "groupTitle": "チュートリアル",
+      "chapter1": "第1章: 🚀 Solana バリデーターの完全ガイド - ゼロからの設定、ノードの効率的起動術 🛠️",
+      "chapter2": "第2章: 🔐🚚 セキュリティと移転の完全ガイド - シークレットキーの安全なバックアップ、交換、そして定期アップデート作業 💼",
+      "chapter3": "第3章: 🌐💰 クラウド活用の全貌: Solana バリデーターの効率的モニタリングとステイキングリワードの管理 🚀🔍",
+      "chapter4": "第4章: 📊🔥 Firestore と Google スプレッドシートを活用した収益管理 - 効率的なデータ追跡と分析の実践ガイド 📈"
     }
   },
   "headerNav": {
