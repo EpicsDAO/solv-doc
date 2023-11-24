@@ -3,15 +3,10 @@ import {
   HeartIcon,
   HomeIcon,
   RocketLaunchIcon,
-  ShieldCheckIcon,
-  WindowIcon,
-  DevicePhoneMobileIcon,
-  AcademicCapIcon,
-  BookOpenIcon,
-  FireIcon,
-  CloudArrowUpIcon,
-  CommandLineIcon,
   CogIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CircleStackIcon,
 } from '@heroicons/react/24/outline'
 
 export const defaultMainNav = [
@@ -101,22 +96,22 @@ export const docMenuNav = [
       {
         name: 'doc:menuNav.tutorial.chapter1',
         href: '/doc/tutorial/chapter1',
-        icon: RocketLaunchIcon,
+        icon: CogIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter2',
         href: '/doc/tutorial/chapter2',
-        icon: RocketLaunchIcon,
+        icon: CircleStackIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter3',
         href: '/doc/tutorial/chapter3',
-        icon: ShieldCheckIcon,
+        icon: CloudIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter4',
         href: '/doc/tutorial/chapter4',
-        icon: ShieldCheckIcon,
+        icon: ChartBarIcon,
       },
     ],
   },
