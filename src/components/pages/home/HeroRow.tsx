@@ -101,10 +101,8 @@ export default function HomeHeroRow() {
             </h1>
             <p
               className={clsx(
-                'mt-3  text-lg font-normal tracking-tight text-gray-500 dark:text-gray-200 ',
-                isJapanese
-                  ? 'max-w-xl sm:mt-5 sm:text-xl'
-                  : 'max-w-lg sm:mt-8 sm:text-2xl'
+                'mt-3 text-lg font-normal tracking-tight text-gray-500 dark:text-gray-200 sm:mt-5 ',
+                isJapanese ? 'max-w-xl sm:text-xl' : 'max-w-lg sm:text-2xl'
               )}
             >
               {t('home:HeroRow.body')}
