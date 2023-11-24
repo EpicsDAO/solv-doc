@@ -5,7 +5,7 @@ import solanaLogo from '@/assets/img/logo/projects/SolanaLogoHorizontal.svg'
 import { Button } from '@/components/common/atoms/Button'
 import clsx from 'clsx'
 import siteConfig from '@/config/site'
-import { useCallback, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { copyToClipboard } from '@/utils/userAction'
 import { Tab } from '@headlessui/react'
 import latitudeLogo from '@/assets/img/logo/partners/Latitude/latitudesh-logotype-dark.svg'
@@ -26,7 +26,8 @@ const providerList = [
 ]
 
 export default function HomeHeroRow() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isJapanese = useMemo(() => i18n.language === 'ja', [i18n.language])
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const [copyText1, setCopyText1] = useState('common:copy')
@@ -88,10 +89,24 @@ export default function HomeHeroRow() {
         </svg>
         <Container className="flex flex-col justify-between gap-x-8 gap-y-24 py-24 md:flex-row lg:py-32">
           <div>
-            <h1 className="font-display mx-auto max-w-4xl text-5xl font-extrabold tracking-tighter text-gray-900 dark:text-gray-50 sm:text-7xl">
+            <h1
+              className={clsx(
+                'font-display mx-auto font-extrabold  text-gray-900 dark:text-gray-50 ',
+                isJapanese
+                  ? 'max-w-2xl text-4xl tracking-tight sm:text-6xl'
+                  : 'max-w-2xl text-5xl tracking-tighter sm:text-7xl'
+              )}
+            >
               {t('home:HeroRow.title')}
             </h1>
-            <p className="mt-3 max-w-lg text-lg font-normal tracking-tight text-gray-500 dark:text-gray-200 sm:text-2xl">
+            <p
+              className={clsx(
+                'mt-3  text-lg font-normal tracking-tight text-gray-500 dark:text-gray-200 ',
+                isJapanese
+                  ? 'max-w-xl sm:mt-5 sm:text-xl'
+                  : 'max-w-lg sm:mt-8 sm:text-2xl'
+              )}
+            >
               {t('home:HeroRow.body')}
             </p>
             <div className="mt-6 flex gap-x-6">
