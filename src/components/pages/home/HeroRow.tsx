@@ -86,12 +86,12 @@ export default function HomeHeroRow() {
             fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
           />
         </svg>
-        <Container className="flex flex-col justify-between gap-8 py-24 md:flex-row lg:py-32">
+        <Container className="flex flex-col justify-between gap-x-8 gap-y-24 py-24 md:flex-row lg:py-32">
           <div>
-            <h1 className="font-display mx-auto max-w-4xl text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-6xl">
+            <h1 className="font-display mx-auto max-w-4xl text-5xl font-extrabold tracking-tighter text-gray-900 dark:text-gray-50 sm:text-7xl">
               {t('home:HeroRow.title')}
             </h1>
-            <p className="text-md mt-3 max-w-lg font-normal tracking-tight text-gray-500 dark:text-gray-200 sm:text-lg">
+            <p className="mt-3 max-w-lg text-lg font-normal tracking-tight text-gray-500 dark:text-gray-200 sm:text-2xl">
               {t('home:HeroRow.body')}
             </p>
             <div className="mt-6 flex gap-x-6">
@@ -110,7 +110,7 @@ export default function HomeHeroRow() {
             </div>
             <ul
               role="list"
-              className="mt-12 flex flex-col items-center justify-start gap-x-8 gap-y-10 sm:gap-x-0 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+              className="mt-12 flex flex-col items-start justify-start gap-x-8 gap-y-10 sm:gap-x-0 xl:flex-row xl:gap-x-12 xl:gap-y-0"
             >
               {[
                 [
@@ -166,7 +166,7 @@ export default function HomeHeroRow() {
                     key={provider.name}
                     className={({ selected }) =>
                       clsx(
-                        'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-gray-900',
+                        'w-full rounded-lg py-2.5 text-sm font-bold leading-5 tracking-tight text-gray-900',
                         'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                         selected
                           ? 'bg-white shadow'
@@ -187,7 +187,7 @@ export default function HomeHeroRow() {
                     <div className="mb-3 flex items-baseline">
                       <span className="mr-4 text-4xl font-bold">1.</span>
                       <div>
-                        <h2 className="text-2xl font-bold">
+                        <h2 className="text-2xl font-bold tracking-tighter">
                           {t('solvInstall')}
                         </h2>
                       </div>
@@ -203,7 +203,7 @@ export default function HomeHeroRow() {
                           onClick={() => {
                             handleClick1()
                           }}
-                          className="text-sm font-bold hover:text-gray-200"
+                          className="text-sm font-bold tracking-tight hover:text-gray-200"
                         >
                           {t(copyText1)}
                         </button>
@@ -215,7 +215,7 @@ export default function HomeHeroRow() {
                     <div className="mb-3 mt-4 flex items-baseline">
                       <span className="mr-4 text-4xl font-bold">2.</span>
                       <div>
-                        <h2 className="text-2xl font-bold">
+                        <h2 className="text-2xl font-bold tracking-tighter">
                           {t('updateSettings')}
                         </h2>
                       </div>
@@ -231,7 +231,7 @@ export default function HomeHeroRow() {
                           onClick={() => {
                             handleClick2()
                           }}
-                          className="text-sm font-bold hover:text-gray-200"
+                          className="text-sm font-bold tracking-tight hover:text-gray-200"
                         >
                           {t(copyText2)}
                         </button>
@@ -243,7 +243,9 @@ export default function HomeHeroRow() {
                     <div className="mb-3 mt-4 flex items-baseline">
                       <span className="mr-4 text-4xl font-bold">3.</span>
                       <div>
-                        <h2 className="text-2xl font-bold">{t('setupSolv')}</h2>
+                        <h2 className="text-2xl font-bold tracking-tighter">
+                          {t('setupSolv')}
+                        </h2>
                       </div>
                     </div>
                     <div className="relative mx-auto rounded-md bg-gray-900 p-4 text-white">
@@ -257,7 +259,7 @@ export default function HomeHeroRow() {
                           onClick={() => {
                             handleClick3()
                           }}
-                          className="text-sm font-bold hover:text-gray-200"
+                          className="text-sm font-bold tracking-tight hover:text-gray-200"
                         >
                           {t(copyText3)}
                         </button>
@@ -269,7 +271,9 @@ export default function HomeHeroRow() {
                     <div className="mb-3 mt-4 flex items-baseline">
                       <span className="mr-4 text-4xl font-bold">...</span>
                       <div>
-                        <h2 className="text-2xl font-bold">{t('thatsAll')}</h2>
+                        <h2 className="text-2xl font-bold tracking-tighter">
+                          {t('thatsAll')}
+                        </h2>
                       </div>
                     </div>
                   </Tab.Panel>

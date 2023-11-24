@@ -31,10 +31,10 @@
     },
     "tutorial": {
       "groupTitle": "チュートリアル",
-      "chapter1": "①: Solanaバリデーター設定",
-      "chapter2": "②: バックアップと移転",
-      "chapter3": "③: クラウドとSolana監視",
-      "chapter4": "④: 収益管理と分析"
+      "chapter1": "1. Solanaバリデーター設定",
+      "chapter2": "2. バックアップと移転",
+      "chapter3": "3. クラウドとSolana監視",
+      "chapter4": "4. 収益管理と分析"
     }
   },
   "headerNav": {

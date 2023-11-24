@@ -31,10 +31,10 @@
     },
     "tutorial": {
       "groupTitle": "Tutorial",
-      "chapter1": "①: Solana Setup",
-      "chapter2": "②: Backup & Migrate",
-      "chapter3": "③: Cloud & Monitor",
-      "chapter4": "④: Revenue Analysis"
+      "chapter1": "1. Solana Setup",
+      "chapter2": "2. Backup & Migrate",
+      "chapter3": "3. Cloud & Monitor",
+      "chapter4": "4. Revenue Analysis"
     }
   },
   "headerNav": {
