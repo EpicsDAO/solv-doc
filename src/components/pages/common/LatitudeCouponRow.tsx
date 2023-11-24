@@ -29,7 +29,7 @@ export default function LatitudeCouponRow() {
                 <h2 className="bg-gradient-to-tl from-green-500 via-blue-400 to-purple-400 bg-clip-text text-base font-semibold leading-7 text-transparent">
                   {t('common:LatitudeCouponRow.subtitle')}
                 </h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                <p className="mt-2 text-3xl font-extrabold tracking-tighter text-gray-900 dark:text-white sm:text-4xl">
                   {t('common:LatitudeCouponRow.title')}
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">

@@ -90,7 +90,7 @@ export default function RoadmapRow() {
     <>
       <div className="mx-auto max-w-2xl px-4 py-48 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="pb-16 text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl">
+          <h2 className="pb-16 text-4xl font-extrabold tracking-tighter text-gray-900 dark:text-gray-50 sm:text-5xl">
             Roadmap
           </h2>
         </div>

@@ -130,7 +130,7 @@ export default function CommonFooter() {
                   />
                 </a>
               </div>
-              <p className="mt-6 text-sm text-gray-500 sm:mt-0">
+              <p className="mt-6 text-sm font-medium tracking-tight text-gray-500 sm:mt-0">
                 &copy; {new Date().getFullYear()} {siteConfig.copyright} All
                 rights reserved.
               </p>

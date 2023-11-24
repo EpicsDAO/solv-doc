@@ -36,7 +36,7 @@ export default function WhyOpenSourceDevelopmentRow() {
           <h2 className="bg-gradient-to-tl from-red-400 via-purple-400 to-blue-400 bg-clip-text text-base font-semibold leading-7 text-transparent">
             {t('common:WhyOpenSourceDevelopmentRow.subtitle')}
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          <p className="mt-2 text-3xl font-extrabold tracking-tighter text-gray-900 dark:text-white sm:text-5xl">
             {t('common:WhyOpenSourceDevelopmentRow.title')}
           </p>
           <p className="mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-gray-200">
@@ -61,7 +61,7 @@ export default function WhyOpenSourceDevelopmentRow() {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
+                <dt className="flex items-center gap-x-3 text-base font-bold leading-7 tracking-tight text-gray-900 dark:text-white">
                   <feature.icon
                     className="h-5 w-5 flex-none"
                     aria-hidden="true"

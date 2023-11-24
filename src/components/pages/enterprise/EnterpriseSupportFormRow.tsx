@@ -46,7 +46,7 @@ export default function EnterpriseSupportFormRow() {
               </svg>
               Support
             </span>
-            <p className="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            <p className="mt-3 text-3xl font-extrabold tracking-tighter text-gray-900 dark:text-white sm:text-4xl">
               {t('enterprise:EnterpriseSupportFormRow.title')}
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
@@ -58,8 +58,8 @@ export default function EnterpriseSupportFormRow() {
               <dl className="col-span-1 grid grid-cols-1 gap-y-10 lg:col-span-3">
                 {merits.map((item) => (
                   <div key={item.title} className="relative  pl-16">
-                    <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center bg-gray-50 text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-gray-800">
+                    <dt className="text-base font-bold leading-7 tracking-tight text-gray-900 dark:text-white">
+                      <div className="bg-gray-50text-gray-600 absolute left-0 top-0 flex h-10 w-10 items-center justify-center ring-1 ring-inset ring-gray-500/10 dark:bg-gray-800">
                         <item.icon
                           className="h-6 w-6 text-gray-600 dark:text-gray-200"
                           aria-hidden="true"
@@ -81,7 +81,7 @@ export default function EnterpriseSupportFormRow() {
                   <p className="mt-6 text-center font-bold">
                     {t('enterprise:EnterpriseSupportFormRow.cardTitle')}
                   </p>
-                  <p className="mt-2 text-center text-sm font-light">
+                  <p className="mt-2 text-center text-sm font-light tracking-tight">
                     by Epics DAO
                   </p>
                   <p className="mt-4 text-center text-sm">
