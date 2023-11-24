@@ -13,7 +13,7 @@ This chapter utilizes Cloud Functions for Firebase and the serverless framework 
 First, deploy `Cloud Functions for Firebase`.
 Please refer to the following section for setting up this development environment and deployment.
 
-https://zenn.dev/fumisouls/books/a27314e5a8428d/viewer/fdeb74
+https://link.medium.com/Jvrjbv2uZEb
 
 ## 📩 Obtaining Discord Webhook URL
 
