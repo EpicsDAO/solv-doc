@@ -1,0 +1,10 @@
+{
+  "langFrom": "ja",
+  "langsTo": ["en"],
+  "paths": [
+    "/Users/fumi/Dev/ts/solv-doc/articles/doc/ja/tutorial/chapter1.md",
+    "/Users/fumi/Dev/ts/solv-doc/articles/doc/ja/tutorial/chapter2.md",
+    "/Users/fumi/Dev/ts/solv-doc/articles/doc/ja/tutorial/chapter3.md",
+    "/Users/fumi/Dev/ts/solv-doc/articles/doc/ja/tutorial/chapter4.md"
+  ]
+}
