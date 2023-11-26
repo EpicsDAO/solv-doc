@@ -9,6 +9,9 @@ import { useCallback, useMemo, useState } from 'react'
 import { copyToClipboard } from '@/utils/userAction'
 import { Tab } from '@headlessui/react'
 import latitudeLogo from '@/assets/img/logo/partners/Latitude/latitudesh-logotype-dark.svg'
+import { BookOpenIcon } from '@heroicons/react/24/outline'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const providerList = [
   {
@@ -109,6 +112,10 @@ export default function HomeHeroRow() {
             </p>
             <div className="mt-6 flex gap-x-6">
               <Button href="/doc" className="">
+                <BookOpenIcon
+                  className="mr-2 inline-block h-5 w-5"
+                  aria-hidden="true"
+                />
                 {t('common:navs.defaultMainNav.doc')}
               </Button>
               <Button
@@ -118,6 +125,10 @@ export default function HomeHeroRow() {
                 target="_blank"
                 rel="noreferrer"
               >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="mr-2 inline-block h-5 w-5"
+                />
                 GitHub
               </Button>
             </div>
