@@ -87,7 +87,7 @@ https://docs.solana.com/running-validator/validator-reqs
 を行います。
 
 ```bash
-sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/install-v1.7.0")"
+sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/install-v1.7.2")"
 ```
 
 ### ✅ すでにローカルコンピューターに `npm` がある場合。
@@ -202,7 +202,7 @@ Edgevana と Latitude 版があるので、使用するタイプをタブで選�
 ここでは TDS に参加することを想定し、`Edgevana`を選択します。
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.2/install")"
 ```
 
 このコマンドで最初に solv ユーザーを作成するので、
