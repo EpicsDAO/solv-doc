@@ -133,7 +133,7 @@ Only showing the first 10 results
 
 ## 🔄 Restarting the Validator Node
 
-To apply the exchanged keys, execute the following command to restart the validator node.
+Execute the following command inside the validator node to apply the exchanged keys and restart the node.
 
 ```bash
 solv restart --snapshot

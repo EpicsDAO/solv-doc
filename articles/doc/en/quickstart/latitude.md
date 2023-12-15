@@ -49,7 +49,7 @@ Server OS:
 ## Solana Validator Setup
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.6/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.8/install")"
 $ cd ~ && source ~/.profile
 $ solv setup
 ```
