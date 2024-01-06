@@ -84,7 +84,7 @@ In this step, we will introduce how to back up keys from the `validator node` to
 Execute the following command from your local computer. Please enter the IP address of your validator node server.
 
 ```bash
-solv scp backup
+solv scp download
 ? Enter your Ubuntu Server IP (1.1.1.1)
 ✅ Successfully Generated - ~/solvKeys/download/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/download/mainnet-validator-keypair.json
