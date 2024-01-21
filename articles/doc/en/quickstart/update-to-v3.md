@@ -1,7 +1,7 @@
 ---
-id: quickstart-latitude
-title: Quickstart - For Latitude
-description: Quickstart of solv, an open-source tool for Solana validator for Latitude
+id: quickstart-update-to-v3
+title: Quickstart - For Edgevana
+description: Quickstart of solv, an open-source tool for Solana validator for Edgevana
 ---
 
 solv is a comprehensive command-line utility designed for Solana network
@@ -11,45 +11,14 @@ performance insights. Whether you're a seasoned Solana validator or just
 getting started, solv provides the tools you need to ensure optimal validator
 operations on the Solana blockchain.
 
-## 🎁 Solana Validator Trial Campaign
-
-![Latitude Coupon](https://storage.googleapis.com/epics-bucket/Validator/LatitudeCoupon.png)
-
-solv, in partnership with Latitude, is offering a $100 coupon 🎉
-
-By utilizing this coupon, you can obtain $100 in free credits when setting up a Solana validator using solv.
-
-Please add the following coupon code from the admin panel 👷‍♀️
-
-​【$100 Coupon Code: ELSOUL100】
-
-🖥️ Bare Metal Server - Latitude.sh:
-[https://latitude.sh](https://latitude.sh?elsoul=solv2)
-
-## 🔴 YouTube Video
-
-https://youtu.be/rY4bajhRJgw
-
-## 📖 Server Spec
-
-Tested on the following servers:
-
-Metal server: c3.large.x86
-
-- 24 Cores
-- 2.8 5GHz
-- 256GB RAM
-- 2 x 1.9TB NVME
-
-Server OS:
-
-- Linux Ubuntu 20.04 TS
-- Linux Ubuntu 22.04 TS
-
 ## Solana Validator Setup
 
+Linux Ubuntu 20.04 TS - Edgevana
+
+User: solv
+
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.8/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.2/install")"
 $ cd ~ && source ~/.profile
 $ solv setup
 ```
@@ -73,16 +42,6 @@ $ solv setup
 ```bash
 $ solv start
 ```
-
-## Check Epoch
-
-```bash
-$ solv epoch
-```
-
-This command will show your current epoch.
-
-Now you are running Solana Validator 🎉
 
 ## Stop Solana Validator
 
@@ -132,6 +91,10 @@ This command will show your all config paths which are used by solana validator.
 $ solv config
 ```
 
+## Solana Delegation Program
+
+https://solana.org/delegation-program
+
 ## solv CLI
 
 ```bash
@@ -167,8 +130,3 @@ Commands:
   release|r [options] <version>         publish release
   help [command]                        display help for command
 ```
-
-## EpicsDAO Discord Channel
-
-EpicsDAO Discord channel:
-[https://discord.gg/3rxK8CPxwr](https://discord.gg/3rxK8CPxwr)

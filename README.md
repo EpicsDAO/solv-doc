@@ -7,15 +7,15 @@
   </a>
   <br/>
   <a aria-label="npm version" href="https://www.npmjs.com/package/@epics-dao/solv">
-    <img alt="" src="https://badgen.net/npm/v/@epics-dao/solv2">
+    <img alt="" src="https://badgen.net/npm/v/@epics-dao/solv">
   </a>
   <a aria-label="Downloads Number" href="https://www.npmjs.com/package/@epics-dao/solv">
-    <img alt="" src="https://badgen.net/npm/dt/@epics-dao/solv2">
+    <img alt="" src="https://badgen.net/npm/dt/@epics-dao/solv">
   </a>
-  <a aria-label="License" href="https://github.com/EpicsDAO/solv2/blob/master/LICENSE.txt">
+  <a aria-label="License" href="https://github.com/EpicsDAO/solv/blob/master/LICENSE.txt">
     <img alt="" src="https://badgen.net/badge/license/Apache/blue">
   </a>
-    <a aria-label="Code of Conduct" href="https://github.com/EpicsDAO/solv2/blob/master/CODE_OF_CONDUCT.md">
+    <a aria-label="Code of Conduct" href="https://github.com/EpicsDAO/solv/blob/master/CODE_OF_CONDUCT.md">
     <img alt="" src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg">
   </a>
 </p>
@@ -24,7 +24,7 @@
 
 Document Web Media for "solv" Solana Validator Utility Tool.
 
-[solv - Solana Validator Utility Tool](https://github.com/EpicsDAO/solv2)
+[solv - Solana Validator Utility Tool](https://github.com/EpicsDAO/solv)
 
 solv is a comprehensive command-line utility designed for Solana network
 validators. It simplifies the process of setting up, monitoring, and

@@ -4,6 +4,10 @@ title: 'Chapter 2: 🔐🚚 The Complete Guide to Security and Transfer — Safe
 description: In this chapter, we will explain in detail how to safely manage secret keys.We provide practical guidelines on how to back up keys, securely exchange them, and the restart process in emergencies.
 ---
 
+※ This content is outdated, up to Version 2, and is currently being rewritten for Version 3. If you have any questions, please visit the Epics DAO official Discord server.
+
+https://discord.gg/GmHYfyRamx
+
 Security is at the core of validator operations. In this chapter, we will explain in detail how to safely manage secret keys. We provide practical guidelines on how to back up keys, securely exchange them, and the restart process in emergencies. We also focus on the latest security measures to ensure our readers can continue their validator operations with confidence.
 
 ## 🗝️ Creating SSH Keys - Building a Strong Access Foundation

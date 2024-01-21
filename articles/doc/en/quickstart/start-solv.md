@@ -1,5 +1,5 @@
 ---
-id: quickstart-edgevana
+id: quickstart-start-solv
 title: Quickstart - For Edgevana
 description: Quickstart of solv, an open-source tool for Solana validator for Edgevana
 ---

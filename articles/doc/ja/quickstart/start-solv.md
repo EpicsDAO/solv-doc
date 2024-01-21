@@ -1,5 +1,5 @@
 ---
-id: quickstart-edgevana
+id: quickstart-start-solv
 title: クイックスタート - Edgevana
 description: オープンソースのSolana バリデーター向けツールsolvのクイックスタート - Edgevana
 ---

@@ -4,6 +4,10 @@ title: 'Chapter 3: 🌐💰 The Full Scope of Cloud Utilization: Efficient Monit
 description: In this chapter, we explore how to efficiently monitor Solana validators and manage staking rewards by fully leveraging the power of the cloud.
 ---
 
+※ This content is outdated, up to Version 2, and is currently being rewritten for Version 3. If you have any questions, please visit the Epics DAO official Discord server.
+
+https://discord.gg/GmHYfyRamx
+
 In this chapter, we explore how to efficiently monitor Solana validators and manage staking rewards by fully leveraging the power of the cloud. We aim to implement within the free tier of Firebase Functions using an innovative serverless framework called Skeet Framework. This framework allows us to optimize resources while making it easier and more cost-effective to monitor validator performance and track rewards. As we progress through the chapter, we will explain in detail how to implement these critical processes using Firebase and Skeet Framework, including practical examples.
 
 This chapter utilizes Cloud Functions for Firebase and the serverless framework Skeet.

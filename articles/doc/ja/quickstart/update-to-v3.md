@@ -1,48 +1,21 @@
 ---
-id: quickstart-latitude
-title: クイックスタート - Latitude
-description: オープンソースのSolana バリデーター向けツールsolvのクイックスタート - Latitude
+id: quickstart-update-to-v3
+title: クイックスタート - Edgevana
+description: オープンソースのSolana バリデーター向けツールsolvのクイックスタート - Edgevana
 ---
 
 solv は Solana ネットワークのバリデータ向けの包括的なコマンドラインユーティリティです。Solana のバリデータの設定、監視、および管理を簡単にし、効率的な操作と高度なパフォーマンスの洞察を提供します。経験豊富な Solana バリデータであっても、初めての方であっても、solv は Solana ブロックチェーン上での最適なバリデータの操作を保証するためのツールを提供します。
 
-## 🎁 Solana バリデーター トライアルキャンペーン
-
-![Latitude Coupon](https://storage.googleapis.com/epics-bucket/Validator/LatitudeCoupon.png)
-
-solv は、Latitude とのパートナーシップにより、$100 クーポンを提供しています。
-このクーポンを利用することで、solv を使用して Solana バリデーターをセットアップする際に、$100 分の無料クレジットを獲得することができます。
-以下のクーポンコードを管理画面から追加してください 👷‍♀️
-
-​【$100 クーポンコード: ELSOUL100】
-
-🖥️ ベアメタルサーバー - Latitude.sh:
-[https://latitude.sh](https://latitude.sh?elsoul=solv2)
-
-## 🔴 YouTube ビデオ
-
-https://youtu.be/7nloPjyrk_8
-
-## 📖 サーバースペック
-
-Latitude サーバーで動作確認済みです。
-
-メタルサーバー: c3.large.x86
-
-- 24 Cores
-- 2.8 5GHz
-- 256GB RAM
-- 2 x 1.9TB NVME
-
-OS:
-
-- Linux Ubuntu 20.04 TS
-- Linux Ubuntu 22.04 TS
+https://www.youtube.com/watch?v=lhRGuzCBIo0
 
 ## Solana バリデータのセットアップ
 
+Linux Ubuntu 20.04 TS
+
+User: solv
+
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv2/v2.1.8/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.2/install")"
 $ cd ~ && source ~/.profile
 $ solv setup
 ```
@@ -65,15 +38,6 @@ $ solv setup
 ```bash
 $ solv start
 ```
-
-## Epoch の確認
-
-```bash
-$ solv epoch
-```
-
-このコマンドにより、現在のエポックが表示されます。
-無事に Solana バリデータが起動しました 🎉
 
 ## Solana バリデータの停止
 
@@ -122,6 +86,10 @@ $ solv log -e
 ```bash
 $ solv config
 ```
+
+## Solana Delegation プログラム
+
+https://solana.org/delegation-program
 
 ## solv CLI
 
