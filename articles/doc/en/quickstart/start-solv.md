@@ -1,29 +1,35 @@
 ---
 id: quickstart-start-solv
-title: Quickstart - For Edgevana
-description: Quickstart of solv, an open-source tool for Solana validator for Edgevana
+title: Quickstart
+description: Quickstart of solv, an open-source tool for Solana validator
 ---
 
-solv is a comprehensive command-line utility designed for Solana network
-validators. It simplifies the process of setting up, monitoring, and
-managing Solana validators, offering streamlined operations and enhanced
-performance insights. Whether you're a seasoned Solana validator or just
-getting started, solv provides the tools you need to ensure optimal validator
-operations on the Solana blockchain.
+## CLI Tool for Managing Solana Validators - "solv"
+
+Discover the ease of setting up a Solana Validator Node server using solv, a powerful tool designed to simplify blockchain interactions.
+
+With just a single command, solv eliminates the usual complexities, enabling you to launch a Solana Validator swiftly.
+
+This tool not only streamlines the setup process but also opens doors for more individuals to participate in the blockchain network, making the Solana ecosystem more accessible.
+
+Whether you're a seasoned developer or a blockchain enthusiast stepping into the validator realm, solv is your go-to solution for an uncomplicated, fast setup.
+
+Dive into the world of Solana, explore the capabilities of solv, and be part of the blockchain revolution with minimal effort and maximum efficiency.
+
+## 📖 Server Spec
+
+- Linux Ubuntu 20.04 LTS
+- Linux Ubuntu 22.04 LTS
 
 ## Solana Validator Setup
 
-Linux Ubuntu 20.04 TS - Edgevana
-
-User: solv
-
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.2/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
 $ cd ~ && source ~/.profile
 $ solv setup
 ```
 
-![solv](https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif)
+[![solv](https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif)](https://youtu.be/rY4bajhRJgw)
 
 ## Generate Solana Validator Keys and Config
 
@@ -36,6 +42,10 @@ _If you're participating as a testnet validator, you'll need approximately 500 T
 ```bash
 $ solv setup
 ```
+
+### Solana Delegation Program
+
+https://solana.org/delegation-program
 
 ## Start Solana Validator
 
@@ -63,7 +73,7 @@ If you want to download snapshot, you can use the following command.
 $ solv restart --snapshot
 ```
 
-This command will automatically remove `--no-incremental-snapshots` and add `--no-genesis-fetch`, `--no-snapshot-fetch` to your`solana-validator.sh` command.
+This command will automatically remove `--no-incremental-snapshots` and add `--no-genesis-fetch`, `--no-snapshot-fetch` to yoursolana-validator.sh command.
 
 ## Solana Validator Status
 
@@ -77,23 +87,13 @@ $ solv status
 $ solv log
 ```
 
-or only check Error or Warning logs
-
-```bash
-$ solv log -e
-```
-
 ## Show Solana Validator Config
 
 This command will show your all config paths which are used by solana validator.
 
 ```bash
-$ solv config
+$ solv get config
 ```
-
-## Solana Delegation Program
-
-https://solana.org/delegation-program
 
 ## solv CLI
 
@@ -101,32 +101,26 @@ https://solana.org/delegation-program
 $ solv --help
 Usage: solv [options] [command]
 
-CLI for Solana Validators
+💎 Solana Validator All-in-One CLI 💎
 
 Options:
-  -V, --version                         output the version number
-  -h, --help                            display help for command
+  -v, --version        Output the current version
+  -h, --help           Display help for solv commands
 
 Commands:
-  solv                                  Show Solv AA
-  epoch                                 Get Current Epoch
-  slot                                  Get Current Slot
-  config|c                              Show Solv Validator Config
-  status                                Show Solana Validator Status
-  start                                 Start Solana Validator
-  restart [options]                     Restart Solana Validator
-  stop                                  Stop Solana Validator
-  check                                 Check Solana Validator Environment
-  install|i [options]                   Solana Install/Update Command
-  mt [options]                          Linux Mount Command
-  umt [options]                         Solana Umount Command
-  mtr                                   Mount Reload Command
-  setup [options]                       Setup Solana Validator All-in-One
-  df                                    Disk Free Command
-  lsblk|ls                              Solana Disk Usage Command
-  stake [options] <stakeAccountPubkey>  Solana Delegate Stake Command
-  update|u [options]                    Solana Version Update, Restart and Monitoring Delinquent Stake
-  log|l [options]                       tail logs
-  release|r [options] <version>         publish release
-  help [command]                        display help for command
+  server|s             Open solv Dashboard
+  start                Start Solana Validator
+  restart [options]    Restart Solana Validator
+  stop                 Stop Solana Validator
+  status               Show Solana Validator Status
+  update|u [options]   Update Solana Validator Version
+  log|l [options]      tail logs
+  install|i [options]  Install/Update Solana Version
+  stake                Solana Delegate Stake
+  check                Check Solana Validator
+  get <cmd>            Get Solana Validator Info
+  scp <cmd>            Download/Upload Solana Validator Keypairs
+  cron <cmd>           Run Schedule Tasks
+  setup [options]      Setup Solana Validator
+  help [cmd]           Display help for solv commands
 ```

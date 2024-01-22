@@ -1,128 +1,120 @@
 ---
 id: quickstart-start-solv
-title: クイックスタート - Edgevana
-description: オープンソースのSolana バリデーター向けツールsolvのクイックスタート - Edgevana
+title: クイックスタート
+description: オープンソースの Solana バリデーター向けツール solv クイックスタート
 ---
 
-solv は Solana ネットワークのバリデータ向けの包括的なコマンドラインユーティリティです。Solana のバリデータの設定、監視、および管理を簡単にし、効率的な操作と高度なパフォーマンスの洞察を提供します。経験豊富な Solana バリデータであっても、初めての方であっても、solv は Solana ブロックチェーン上での最適なバリデータの操作を保証するためのツールを提供します。
+## Solana バリデーターの管理用 CLI ツール - "solv"
 
-https://www.youtube.com/watch?v=lhRGuzCBIo0
+solv を使用することで、Solana バリデーターノードサーバーの設定が容易になります。この強力なツールは、ブロックチェーンの操作を単純化し、わずか 1 つのコマンドで Solana バリデーターの起動を可能にします。
 
-## Solana バリデータのセットアップ
+バリデーターのセットアップや運用の複雑さを排除することで、より多くの個人がブロックチェーンネットワークに参加するための扉を開き、Solana エコシステムをよりアクセスしやすくします。
 
-Linux Ubuntu 20.04 TS
+経験豊富な開発者であろうと、バリデーター領域に足を踏み入れるブロックチェーン愛好家であろうと、solv は簡単で迅速なセットアップのためのソリューションです。
 
-User: solv
+Solana の世界に飛び込み、solv の機能を探求し、努力を最小限にして最大の効率でブロックチェーン革命の一部となりましょう。
+
+## 📖 サーバー仕様
+
+- Linux Ubuntu 20.04 TS
+- Linux Ubuntu 22.04 TS
+
+## Solana バリデーターのセットアップ
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.2/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
 $ cd ~ && source ~/.profile
 $ solv setup
 ```
 
-![solv](https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif)
+## Solana バリデーターキーと設定の生成
 
-## Solana バリデータのキーと設定の生成
+Solana バリデーターのキーと設定を生成するには、以下のコマンドを使用します。
 
-Solana のバリデータのキーと設定を生成するには以下のコマンドを使用します。
-_テストネットバリデーターとして投票に参加する場合は、およそ 500 テストネット SOL（無料） が必要です。あらかじめテストネットの SOL を獲得しておき、生成された `testnet-validator-keypair.json` のアドレスへ送金して下さい。_
+_テストネットバリデーターとして参加する場合、約 500 のテストネット SOL（無料）が必要です。事前にテストネット SOL を入手し、生成された testnet-validator-keypair.json の pubkey に転送してください。_
 
-(TDS に参加する方は、EpicsDAO のウォレットにテストネットの SOL が残っている場合は差し上げますので、ディスコードチャンネルまでお越し下さい：https://discord.gg/5PPu6hc2EP)
+（TDS に参加する方向け：EpicsDAO ウォレットにテストネット SOL が残っている場合、提供します。詳細は Discord チャンネルにてご確認ください：https://discord.gg/Z8M8rZeX8R）
 
 ```bash
 $ solv setup
 ```
 
-## Solana バリデータの起動
+### Solana Delegation Program
+
+https://solana.org/delegation-program
+
+## Solana バリデーターの開始
 
 ```bash
 $ solv start
 ```
 
-## Solana バリデータの停止
+## Solana バリデーターの停止
 
 ```bash
 $ solv stop
 ```
 
-## Solana バリデータの再起動
+## Solana バリデーターの再起動
 
 ```bash
 $ solv restart
 ```
 
-デフォルトの solana-validator.sh コマンドは `--no-incremental-snapshots` です。
+デフォルトのコマンドは--no-incremental-snapshots です。
 
-スナップショットをダウンロードしたい場合は、以下のコマンドを使用します。
+スナップショットをダウンロードしたい場合は、以下のコマンドを使用できます。
 
 ```bash
 $ solv restart --snapshot
 ```
 
-このコマンドは自動的に`--no-incremental-snapshots` を削除し、`--no-genesis-fetch` と`--no-snapshot-fetch` をあなたの`solana-validator.sh` コマンドに追加します。
-
-## Solana バリデータのステータス
+## Solana バリデータのステータス確認
 
 ```bash
 $ solv status
 ```
 
-## Solana バリデータのログ
+## Solana バリデーターのログ確認
 
 ```bash
 $ solv log
 ```
 
-または エラー/警告のみを表示する場合は以下のコマンドを使用します。
+## Solana バリデーターの設定確認
+
+このコマンドは、solana バリデーターに使用されるすべての設定パスを表示します。
 
 ```bash
-$ solv log -e
+$ solv get config
 ```
-
-## Solana バリデータの設定の表示
-
-このコマンドは solana バリデータで使用されるすべての設定パスを表示します。
-
-```bash
-$ solv config
-```
-
-## Solana Delegation プログラム
-
-https://solana.org/delegation-program
 
 ## solv CLI
 
 ```bash
 $ solv --help
-使用方法: solv [options] [command]
+使用法: solv [オプション] [コマンド]
 
-Solana バリデータのためのCLI
+💎 Solana バリデーター管理用 CLI 💎
 
 オプション:
-  -V, --version                         バージョン番号を出力
-  -h, --help                            コマンドのヘルプを表示
+  -v, --version        現在のバージョンを表示
+  -h, --help           solvコマンドのヘルプを表示
 
 コマンド:
-  solv                                  Solv AAを表示
-  epoch                                 現在のエポックを取得
-  slot                                  現在のスロットを取得
-  config|c                              Solv バリデータの設定を表示
-  status                                Solana バリデータのステータスを表示
-  start                                 Solana バリデータを起動
-  restart [options]                     Solana バリデータを再起動
-  stop                                  Solana バリデータを停止
-  check                                 Solana バリデータの環境を確認
-  install|i [options]                   Solanaのインストール/更新コマンド
-  mt [options]                          Linuxのマウントコマンド
-  umt [options]                         Solanaのアンマウントコマンド
-  mtr                                   マウントの再読み込みコマンド
-  setup [options]                       Solana バリデータの全機能設定
-  df                                    ディスク空き容量コマンド
-  lsblk|ls                              Solanaディスク使用状況コマンド
-  stake [options] <stakeAccountPubkey>  Solanaのステーク委任コマンド
-  update|u [options]                    Solanaバージョンの更新、再起動、及び不正なステークの監視
-  log|l [options]                       ログを表示
-  release|r [options] <version>         リリースを公開
-  help [command]                        コマンドのヘルプを表示
+  server|s             solvダッシュボードを開く
+  start                Solanaバリデーターを開始
+  restart [オプション]  Solanaバリデーターを再起動
+  stop                 Solanaバリデーターを停止
+  status               Solanaバリデーターのステータスを表示
+  update|u [オプション] Solanaバリデーターのバージョンを更新
+  log|l [オプション]    ログを表示
+  install|i [オプション] Solanaのバージョンをインストール/更新
+  stake                Solanaデリゲートステーク
+  check                Solanaバリデーターをチェック
+  get <cmd>            Solanaバリデーター情報を取得
+  scp <cmd>            Solanaバリデーターキーペアをダウンロード/アップロード
+  cron <cmd>           スケジュールされたタスクを実行
+  setup [オプション]     Solanaバリデーターを設定
+  help [cmd]           solvコマンドのヘルプを表示
 ```
