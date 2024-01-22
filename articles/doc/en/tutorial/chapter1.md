@@ -6,7 +6,7 @@ description: In this chapter, we take the first steps towards success as a Solan
 
 ※ This content is outdated, up to Version 2, and is currently being rewritten for Version 3. If you have any questions, please visit the Epics DAO official Discord server.
 
-https://discord.gg/GmHYfyRamx
+https://discord.gg/Z8M8rZeX8R
 
 In this chapter, we take the first steps towards success as a Solana validator. Centering around an innovative open-source tool named solv, we’ll thoroughly explain the entire process of setting up and operating a Solana validator node. solv simplifies complex processes, enabling efficient node setup and operation.
 

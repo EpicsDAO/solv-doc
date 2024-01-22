@@ -6,7 +6,7 @@ description: この章では、Firebase の Firestore と Google スプレッド
 
 ※こちらの内容は Ver.2 までの古いものになっており、ただいま Ver.3 対応のため書き直し中です。もしご質問等ございましたら Epics DAO 公式 Discord サーバーまでお越しください。
 
-https://discord.gg/GmHYfyRamx
+https://discord.gg/Z8M8rZeX8R
 
 この章では、Firebase の Firestore と Google スプレッドシートを駆使して、Solana バリデーターとしての収益を効率的に管理する方法を解説します。データ収集から分析、報告までの全プロセスをカバーし、リアルタイムでのパフォーマンス追跡と意思決定の迅速化を目指します。Firestore の強力なデータベース機能と Google スプレッドシートのアクセシビリティを組み合わせることで、収益管理の自動化と最適化を実現します。本章を通じて、技術的な知識だけでなく、効果的なデータ活用方法を身につけることができます。
 

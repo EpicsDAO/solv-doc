@@ -16,8 +16,8 @@ Solana の世界に飛び込み、solv の機能を探求し、努力を最小�
 
 ## 📖 サーバー仕様
 
-- Linux Ubuntu 20.04 TS
-- Linux Ubuntu 22.04 TS
+- Linux Ubuntu 20.04 LTS
+- Linux Ubuntu 22.04 LTS
 
 ## Solana バリデーターのセットアップ
 

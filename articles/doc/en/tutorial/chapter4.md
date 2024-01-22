@@ -6,7 +6,7 @@ description: In this chapter, we will explain how to efficiently manage earnings
 
 ※ This content is outdated, up to Version 2, and is currently being rewritten for Version 3. If you have any questions, please visit the Epics DAO official Discord server.
 
-https://discord.gg/GmHYfyRamx
+https://discord.gg/Z8M8rZeX8R
 
 In this chapter, we will explain how to efficiently manage earnings as a Solana validator using Firebase’s Firestore and Google Spreadsheets. We cover the entire process from data collection to analysis and reporting, aiming for real-time performance tracking and faster decision-making. By combining Firestore’s powerful database capabilities with the accessibility of Google Spreadsheets, we achieve automation and optimization in revenue management. Through this chapter, you can gain not only technical knowledge but also effective data utilization methods.
 
