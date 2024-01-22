@@ -41,6 +41,14 @@ The key's randomart image is:
 
 A key pair for `ssh` connection has been created.
 
+Display the necessary SSH public key for the settings.
+
+```bash
+solv scp cat
+```
+
+Copy this public key and keep it.
+
 ## 🔗 Setting up SSH Connection on Validator Server - Establishing Secure Remote Access
 
 Connect to your validator node's server using `SSH`.
@@ -56,14 +64,6 @@ su solv
 cd ~ && source ~/.profile
 ```
 
-Display the necessary SSH public key for the settings.
-
-```bash
-solv scp cat
-```
-
-Copy this public key and keep it.
-
 Next, set up the SSH connection with the following command.
 
 ```bash
@@ -76,12 +76,12 @@ This completes the connection setup between your local computer and the validato
 
 ## 📦 Key Backup (Validator Node → Local Computer)
 
-In this step, we will introduce how to back up keys from the `validator node` to your `local computer`. The following four keys located in the `/mt/solana/` directory will be downloaded:
+In this step, we will introduce how to back up keys from the `validator node` to your `local computer`. The following four keys located in the `/home/solv` directory will be downloaded:
 
-- `/mt/solana/mainnet-validator-keypair.json`
-- `/mt/solana/testnet-validator-keypair.json`
-- `/mt/solana/vote-account-keypair.json`
-- `/mt/solana/authority-keypair.json`
+- `/home/solv/mainnet-validator-keypair.json`
+- `/home/solv/testnet-validator-keypair.json`
+- `/home/solv/testnet-vote-account-keypair.json`
+- `/home/solv/testnet-authority-keypair.json`
 
 ※ If you are uploading keys from your `local computer` to the `validator node`, please skip this step.
 
@@ -92,8 +92,8 @@ solv scp download
 ? Enter your Ubuntu Server IP (1.1.1.1)
 ✅ Successfully Generated - ~/solvKeys/download/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/download/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/authority-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-vote-account-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-authority-keypair.json
 ```
 
 The keys have been saved in the `~/solvKeys/download` directory 🎉
@@ -107,7 +107,7 @@ Execute the following command from your local computer and enter the IP address 
 
 All keys created in the previous chapters will be uploaded to the
 
-`/mt/solana`
+`~/solvKeys/upload`
 
 directory.
 (Note: It is recommended to always take a backup as existing files with the same name will be overwritten.)
@@ -169,7 +169,7 @@ solv update -b
 If you decide to monitor later, you can check with the following command:
 
 ```bash
-solv monitor
+solv get monitor
 ```
 
 In the next chapter, we will introduce how to monitor validator nodes in a serverless environment.

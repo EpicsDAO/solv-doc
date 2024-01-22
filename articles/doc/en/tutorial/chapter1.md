@@ -90,7 +90,7 @@ With the following one-liner command, you can install:
 - `solv CLI`
 
 ```bash
-sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/install-v1.7.2")"
+sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
 ```
 
 ### ✅ If `npm` is already installed on your local computer.
@@ -113,8 +113,8 @@ The following command will create four keys:
 solv setup --key
 ✅ Successfully Generated - ~/solvKeys/upload/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/upload/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/authority-keypair.json
+✅ Successfully Generated - ~/solvKeys/upload/testnet-vote-account-keypair.json
+✅ Successfully Generated - ~/solvKeys/upload/testnet-authority-keypair.json
 ```
 
 The addresses for each key will be displayed in the log, so it's helpful to take note of them for future reference 💡
@@ -139,12 +139,17 @@ By participating in this program, it seems you can receive delegated stakes from
 Eligibility Criteria
 https://solana.org/delegation-criteria
 
+Solana Foundation Delegation Program Command-line Utility
+https://github.com/solana-foundation/stake-o-matic/tree/master/cli
+
 Furthermore, you need to sign your Pubkey with the following command (this step must be done on Ubuntu only):
 
 Installation
 
 ```bash
-$ sudo apt install libudev-dev
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ source "$HOME/.cargo/env"
+$ sudo apt install build-essential libssl-dev pkg-config libudev-dev libhidapi-dev
 $ cargo install solana-foundation-delegation-program-cli
 $ solana-foundation-delegation-program --version
 ```
@@ -152,6 +157,7 @@ $ solana-foundation-delegation-program --version
 Since the signing is done on the mainnet, a small amount of SOL is required.
 
 ```bash
+$ solana config set --url https://api.mainnet-beta.solana.com
 $ solana -um balance
 ```
 
@@ -161,14 +167,11 @@ Execution
 $ solana-foundation-delegation-program apply --mainnet ~/solvKeys/upload/mainnet-validator-keypair.json --testnet ~/solvKeys/upload/testnet-validator-keypair.json
 ```
 
-If you do not complete this step, you will be rejected by the following form:
-https://solana.org/delegation-program
-
 ## 🌐 Preparing Testnet SOL
 
 To participate in voting with a testnet validator, you will need approximately 315 test SOL per year.
 Additionally, staking any amount of SOL from any account to your own testnet validator can accelerate progress. Staking on this testnet can be done by changing the network to testnet in the developer settings of the Phantom wallet.
-(Staking to the address in `vote-account-keypair.json`)
+(Staking to the address in `testnet-vote-account-keypair.json`)
 
 ```bash
 $ solana airdrop 1
@@ -200,7 +203,7 @@ There are versions for Edgevana and Latitude, so please select the type you want
 Here, we assume participation in TDS and select `Edgevana`.
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.2/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
 ```
 
 This command will initially create a solv user, so you will need to set a password.
@@ -245,7 +248,7 @@ $ solv log -e
 You can check the current status of the validators with the following command.
 
 ```bash
-solv monitor
+solv get monitor
 ```
 
 ## ⏹️ Stopping the Validator

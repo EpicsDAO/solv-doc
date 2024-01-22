@@ -41,6 +41,14 @@ The key's randomart image is:
 
 `ssh` 接続のためのキーペアが作成されました。
 
+設定に必要な SSH 公開鍵を表示します。
+
+```bash
+solv scp cat
+```
+
+この公開鍵をコピーしておきます。
+
 ## 🔗 バリデーターサーバーで SSH 接続設定 - セキュアなリモートアクセスの確立
 
 バリデーターノードのサーバーへ `SSH`接続します。
@@ -56,14 +64,6 @@ su solv
 cd ~ && source ~/.profile
 ```
 
-設定に必要な SSH 公開鍵を表示します。
-
-```bash
-solv scp cat
-```
-
-この公開鍵をコピーしておきます。
-
 次に以下のコマンドで SSH 接続設定を行います。
 
 ```bash
@@ -77,12 +77,12 @@ solv scp create
 ## 📦 鍵のバックアップ（バリデーターノード → ローカルコンピュータ）
 
 このステップでは `バリデーターノード` から `ローカルコンピュータ` へ鍵のバックアップを取る方法を紹介します。
-`/mt/solana/` ディレクトリにある以下の 4 つの鍵がダウンロードされます。
+`/home/solv` ディレクトリにある以下の 4 つの鍵がダウンロードされます。
 
-- `/mt/solana/mainnet-validator-keypair.json`
-- `/mt/solana/testnet-validator-keypair.json`
-- `/mt/solana/vote-account-keypair.json`
-- `/mt/solana/authority-keypair.json`
+- `/home/solv/mainnet-validator-keypair.json`
+- `/home/solv/testnet-validator-keypair.json`
+- `/home/solv/testnet-vote-account-keypair.json`
+- `/home/solv/testnet-authority-keypair.json`
 
 ※鍵を `ローカルコンピュータ` から `バリデーターノード`へアップロードする方はこのステップをスキップして下さい。
 
@@ -94,8 +94,8 @@ solv scp download
 ? Enter your Ubuntu Server IP (1.1.1.1)
 ✅ Successfully Generated - ~/solvKeys/download/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/download/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/authority-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-vote-account-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-authority-keypair.json
 ```
 
 `~/solvKeys/download` ディレクトリに鍵が保存されました 🎉
@@ -110,7 +110,7 @@ solv scp download
 
 に全章で作成された鍵が
 
-`/mt/solana`
+`~/solvKeys/upload`
 
 ディレクトリにアップロードされます。
 (※同じファイル名がある場合上書きされるので必ずバックアップを取ることをお勧めします。)
@@ -176,7 +176,7 @@ solv update -b
 あとからモニターする場合でも以下のコマンドで確認することができます。
 
 ```bash
-solv monitor
+solv get monitor
 ```
 
 次の章ではサーバーレス環境でバリデーターノードを監視する方法についてご紹介したいと思います。
