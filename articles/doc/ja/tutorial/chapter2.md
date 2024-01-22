@@ -4,6 +4,10 @@ title: '第2章: 🔐🚚 セキュリティと移転の完全ガイド - シー
 description: この章では、シークレットキーの安全な管理方法を詳しく説明します。バックアップの取り方、キーの安全な交換方法、そして緊急時のリスタートプロセスについて、実践的なガイドラインを提供します。
 ---
 
+※こちらの内容は Ver.2 までの古いものになっており、ただいま Ver.3 対応のため書き直し中です。もしご質問等ございましたら Epics DAO 公式 Discord サーバーまでお越しください。
+
+https://discord.gg/Z8M8rZeX8R
+
 セキュリティはバリデーター運営の中心です。この章では、シークレットキーの安全な管理方法を詳しく説明します。バックアップの取り方、キーの安全な交換方法、そして緊急時のリスタートプロセスについて、実践的なガイドラインを提供します。読者が安心してバリデーター運用を続けられるよう、最新のセキュリティ対策にも焦点を当てます。
 
 ## 🗝️ SSH 鍵の作成 - 強固なアクセス基盤の構築
@@ -37,6 +41,14 @@ The key's randomart image is:
 
 `ssh` 接続のためのキーペアが作成されました。
 
+設定に必要な SSH 公開鍵を表示します。
+
+```bash
+solv scp cat
+```
+
+この公開鍵をコピーしておきます。
+
 ## 🔗 バリデーターサーバーで SSH 接続設定 - セキュアなリモートアクセスの確立
 
 バリデーターノードのサーバーへ `SSH`接続します。
@@ -52,14 +64,6 @@ su solv
 cd ~ && source ~/.profile
 ```
 
-設定に必要な SSH 公開鍵を表示します。
-
-```bash
-solv scp cat
-```
-
-この公開鍵をコピーしておきます。
-
 次に以下のコマンドで SSH 接続設定を行います。
 
 ```bash
@@ -73,12 +77,12 @@ solv scp create
 ## 📦 鍵のバックアップ（バリデーターノード → ローカルコンピュータ）
 
 このステップでは `バリデーターノード` から `ローカルコンピュータ` へ鍵のバックアップを取る方法を紹介します。
-`/mnt/` ディレクトリにある以下の 4 つの鍵がダウンロードされます。
+`/home/solv` ディレクトリにある以下の 4 つの鍵がダウンロードされます。
 
-- `/mnt/mainnet-validator-keypair.json`
-- `/mnt/testnet-validator-keypair.json`
-- `/mnt/vote-account-keypair.json`
-- `/mnt/authority-keypair.json`
+- `/home/solv/mainnet-validator-keypair.json`
+- `/home/solv/testnet-validator-keypair.json`
+- `/home/solv/testnet-vote-account-keypair.json`
+- `/home/solv/testnet-authority-keypair.json`
 
 ※鍵を `ローカルコンピュータ` から `バリデーターノード`へアップロードする方はこのステップをスキップして下さい。
 
@@ -86,12 +90,12 @@ solv scp create
 バリデーターノードサーバーの IP を入力してください
 
 ```bash
-solv scp backup
+solv scp download
 ? Enter your Ubuntu Server IP (1.1.1.1)
 ✅ Successfully Generated - ~/solvKeys/download/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/download/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/authority-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-vote-account-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-authority-keypair.json
 ```
 
 `~/solvKeys/download` ディレクトリに鍵が保存されました 🎉
@@ -106,7 +110,7 @@ solv scp backup
 
 に全章で作成された鍵が
 
-`/mnt`
+`~/solvKeys/upload`
 
 ディレクトリにアップロードされます。
 (※同じファイル名がある場合上書きされるので必ずバックアップを取ることをお勧めします。)
@@ -137,8 +141,7 @@ Only showing the first 10 results
 
 ## 🔄 バリデーターノードの再起動
 
-交換した鍵を反映させるために、
-以下のコマンドを実行し、バリデーターノードを再起動します。
+交換した鍵を反映させるために、バリデーターノード内で以下のコマンドを実行しノードを再起動します。
 
 ```bash
 solv restart --snapshot
@@ -173,7 +176,7 @@ solv update -b
 あとからモニターする場合でも以下のコマンドで確認することができます。
 
 ```bash
-solv monitor
+solv get monitor
 ```
 
 次の章ではサーバーレス環境でバリデーターノードを監視する方法についてご紹介したいと思います。

@@ -8,6 +8,8 @@
   "openMenu": "Open menu",
   "closeMenu": "Close menu",
   "media": "Media",
+  "news": "News",
+  "books": "Books",
   "copy": "Copy",
   "copied": "Copied!",
   "solvInstall": "Install solv",
@@ -117,7 +119,7 @@
   "LatitudeCouponRow": {
     "subtitle": "Try it now on Bare Metal Cloud",
     "title": "Latitude Trial Credit Coupon",
-    "description": "Through our partnership with Latitude, we are now able to offer a $100 credit coupon. By utilizing this coupon, you can actually try out launching a Solana validator with solv2 at hand right now.",
+    "description": "Through our partnership with Latitude, we are now able to offer a $100 credit coupon. By utilizing this coupon, you can actually try out launching a Solana validator with solv at hand right now.",
     "register": "Register Coupon",
     "couponCode": "Coupon Code"
   }

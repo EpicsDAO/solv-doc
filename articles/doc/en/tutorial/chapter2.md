@@ -4,6 +4,10 @@ title: 'Chapter 2: 🔐🚚 The Complete Guide to Security and Transfer — Safe
 description: In this chapter, we will explain in detail how to safely manage secret keys.We provide practical guidelines on how to back up keys, securely exchange them, and the restart process in emergencies.
 ---
 
+※ This content is outdated, up to Version 2, and is currently being rewritten for Version 3. If you have any questions, please visit the Epics DAO official Discord server.
+
+https://discord.gg/Z8M8rZeX8R
+
 Security is at the core of validator operations. In this chapter, we will explain in detail how to safely manage secret keys. We provide practical guidelines on how to back up keys, securely exchange them, and the restart process in emergencies. We also focus on the latest security measures to ensure our readers can continue their validator operations with confidence.
 
 ## 🗝️ Creating SSH Keys - Building a Strong Access Foundation
@@ -37,6 +41,14 @@ The key's randomart image is:
 
 A key pair for `ssh` connection has been created.
 
+Display the necessary SSH public key for the settings.
+
+```bash
+solv scp cat
+```
+
+Copy this public key and keep it.
+
 ## 🔗 Setting up SSH Connection on Validator Server - Establishing Secure Remote Access
 
 Connect to your validator node's server using `SSH`.
@@ -52,14 +64,6 @@ su solv
 cd ~ && source ~/.profile
 ```
 
-Display the necessary SSH public key for the settings.
-
-```bash
-solv scp cat
-```
-
-Copy this public key and keep it.
-
 Next, set up the SSH connection with the following command.
 
 ```bash
@@ -72,24 +76,24 @@ This completes the connection setup between your local computer and the validato
 
 ## 📦 Key Backup (Validator Node → Local Computer)
 
-In this step, we will introduce how to back up keys from the `validator node` to your `local computer`. The following four keys located in the `/mnt/` directory will be downloaded:
+In this step, we will introduce how to back up keys from the `validator node` to your `local computer`. The following four keys located in the `/home/solv` directory will be downloaded:
 
-- `/mnt/mainnet-validator-keypair.json`
-- `/mnt/testnet-validator-keypair.json`
-- `/mnt/vote-account-keypair.json`
-- `/mnt/authority-keypair.json`
+- `/home/solv/mainnet-validator-keypair.json`
+- `/home/solv/testnet-validator-keypair.json`
+- `/home/solv/testnet-vote-account-keypair.json`
+- `/home/solv/testnet-authority-keypair.json`
 
 ※ If you are uploading keys from your `local computer` to the `validator node`, please skip this step.
 
 Execute the following command from your local computer. Please enter the IP address of your validator node server.
 
 ```bash
-solv scp backup
+solv scp download
 ? Enter your Ubuntu Server IP (1.1.1.1)
 ✅ Successfully Generated - ~/solvKeys/download/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/download/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/download/authority-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-vote-account-keypair.json
+✅ Successfully Generated - ~/solvKeys/download/testnet-authority-keypair.json
 ```
 
 The keys have been saved in the `~/solvKeys/download` directory 🎉
@@ -103,7 +107,7 @@ Execute the following command from your local computer and enter the IP address 
 
 All keys created in the previous chapters will be uploaded to the
 
-`/mnt`
+`~/solvKeys/upload`
 
 directory.
 (Note: It is recommended to always take a backup as existing files with the same name will be overwritten.)
@@ -133,7 +137,7 @@ Only showing the first 10 results
 
 ## 🔄 Restarting the Validator Node
 
-To apply the exchanged keys, execute the following command to restart the validator node.
+Execute the following command inside the validator node to apply the exchanged keys and restart the node.
 
 ```bash
 solv restart --snapshot

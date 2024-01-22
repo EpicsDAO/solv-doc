@@ -4,6 +4,10 @@ title: 'Chapter 1: 🚀 The Complete Guide to Solana Validators — Setting Up f
 description: In this chapter, we take the first steps towards success as a Solana validator. Centering around an innovative open-source tool named solv, we’ll thoroughly explain the entire process of setting up and operating a Solana validator node. solv simplifies complex processes, enabling efficient node setup and operation.
 ---
 
+※ This content is outdated, up to Version 2, and is currently being rewritten for Version 3. If you have any questions, please visit the Epics DAO official Discord server.
+
+https://discord.gg/Z8M8rZeX8R
+
 In this chapter, we take the first steps towards success as a Solana validator. Centering around an innovative open-source tool named solv, we’ll thoroughly explain the entire process of setting up and operating a Solana validator node. solv simplifies complex processes, enabling efficient node setup and operation.
 
 First, we’ll learn about the recommended environment settings for Solana validators. Next, we introduce how to install solv CLI and explain how to create the necessary keys for a Solana validator. We also touch upon the rewards for validators in the Solana Testnet and preparing SOL for use in the testnet.
@@ -86,7 +90,7 @@ With the following one-liner command, you can install:
 - `solv CLI`
 
 ```bash
-sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/install-v1.7.0")"
+sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
 ```
 
 ### ✅ If `npm` is already installed on your local computer.
@@ -109,8 +113,8 @@ The following command will create four keys:
 solv setup --key
 ✅ Successfully Generated - ~/solvKeys/upload/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/upload/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/authority-keypair.json
+✅ Successfully Generated - ~/solvKeys/upload/testnet-vote-account-keypair.json
+✅ Successfully Generated - ~/solvKeys/upload/testnet-authority-keypair.json
 ```
 
 The addresses for each key will be displayed in the log, so it's helpful to take note of them for future reference 💡
@@ -160,14 +164,14 @@ $ solana -um balance
 Execution
 
 ```bash
-$ solana-foundation-delegation-program apply --mainnet mainnet-validator-keypair.json --testnet testnet-validator-keypair.json
+$ solana-foundation-delegation-program apply --mainnet ~/solvKeys/upload/mainnet-validator-keypair.json --testnet ~/solvKeys/upload/testnet-validator-keypair.json
 ```
 
 ## 🌐 Preparing Testnet SOL
 
 To participate in voting with a testnet validator, you will need approximately 315 test SOL per year.
 Additionally, staking any amount of SOL from any account to your own testnet validator can accelerate progress. Staking on this testnet can be done by changing the network to testnet in the developer settings of the Phantom wallet.
-(Staking to the address in `vote-account-keypair.json`)
+(Staking to the address in `testnet-vote-account-keypair.json`)
 
 ```bash
 $ solana airdrop 1
@@ -244,7 +248,7 @@ $ solv log -e
 You can check the current status of the validators with the following command.
 
 ```bash
-solv monitor
+solv get monitor
 ```
 
 ## ⏹️ Stopping the Validator

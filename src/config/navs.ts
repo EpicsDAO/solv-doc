@@ -7,6 +7,7 @@ import {
   CloudIcon,
   ChartBarIcon,
   CircleStackIcon,
+  ArrowPathIcon,
 } from '@heroicons/react/24/outline'
 
 export const defaultMainNav = [
@@ -16,11 +17,11 @@ export const defaultMainNav = [
   },
   {
     name: 'common:navs.defaultMainNav.quickstart',
-    href: '/doc/quickstart/latitude',
+    href: '/doc/quickstart/start-solv/',
   },
   {
     name: 'common:navs.defaultMainNav.enterprise',
-    href: '/enterprise',
+    href: '/enterprise/',
   },
   {
     name: 'common:navs.defaultMainNav.news',
@@ -39,11 +40,11 @@ export const commonFooterNav = [
   },
   {
     name: 'common:navs.commonFooterNav.quickstart',
-    href: '/doc/quickstart/latitude',
+    href: '/doc/quickstart/start-solv/',
   },
   {
     name: 'common:navs.commonFooterNav.enterprise',
-    href: '/enterprise',
+    href: '/enterprise/',
   },
   {
     name: 'common:navs.commonFooterNav.news',
@@ -79,14 +80,14 @@ export const docMenuNav = [
     name: 'doc:menuNav.quickstart.groupTitle',
     children: [
       {
-        name: 'doc:menuNav.quickstart.latitude',
-        href: '/doc/quickstart/latitude',
+        name: 'doc:menuNav.quickstart.start-solv',
+        href: '/doc/quickstart/start-solv/',
         icon: RocketLaunchIcon,
       },
       {
-        name: 'doc:menuNav.quickstart.edgevana',
-        href: '/doc/quickstart/edgevana',
-        icon: RocketLaunchIcon,
+        name: 'doc:menuNav.quickstart.update-to-v3',
+        href: '/doc/quickstart/update-to-v3/',
+        icon: ArrowPathIcon,
       },
     ],
   },
@@ -95,22 +96,22 @@ export const docMenuNav = [
     children: [
       {
         name: 'doc:menuNav.tutorial.chapter1',
-        href: '/doc/tutorial/chapter1',
+        href: '/doc/tutorial/chapter1/',
         icon: CogIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter2',
-        href: '/doc/tutorial/chapter2',
+        href: '/doc/tutorial/chapter2/',
         icon: CircleStackIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter3',
-        href: '/doc/tutorial/chapter3',
+        href: '/doc/tutorial/chapter3/',
         icon: CloudIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter4',
-        href: '/doc/tutorial/chapter4',
+        href: '/doc/tutorial/chapter4/',
         icon: ChartBarIcon,
       },
     ],

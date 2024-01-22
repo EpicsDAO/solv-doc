@@ -36,7 +36,7 @@ export default function SolvFeaturesRow() {
                 <h2 className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-base font-semibold leading-7 text-transparent">
                   {t('home:SolvFeaturesRow.subtitle')}
                 </h2>
-                <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+                <p className="mt-2 text-3xl font-extrabold tracking-tighter text-gray-900 dark:text-white sm:text-4xl">
                   {t('home:SolvFeaturesRow.title')}
                 </p>
                 <p className="text-md mt-6 leading-7 text-gray-600 dark:text-gray-400">
@@ -61,7 +61,7 @@ export default function SolvFeaturesRow() {
             <div className="flex items-start justify-end lg:order-first">
               <Image
                 src="https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif"
-                alt="Skeet App"
+                alt="solv"
                 className="w-[52rem] shadow-xl sm:w-[64rem]"
                 width={2432}
                 height={1442}

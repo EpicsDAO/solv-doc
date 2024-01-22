@@ -23,7 +23,7 @@ export default function ContactRow() {
               aria-label="Discord icon"
               className="h-9 w-9 text-white"
             />
-            <h3 className="mt-2 text-2xl font-semibold leading-6 text-white">
+            <h3 className="mt-2 text-2xl font-extrabold leading-6 tracking-tight text-white">
               {t('ContactRow.discord.title')}
             </h3>
             <div className="mt-2 sm:flex sm:items-start sm:justify-between">
@@ -50,7 +50,7 @@ export default function ContactRow() {
               aria-label="Contact Form"
               className="h-9 w-9 text-white"
             />
-            <h3 className="mt-2 text-2xl font-semibold leading-6 text-white">
+            <h3 className="mt-2 text-2xl font-extrabold leading-6 tracking-tight text-white">
               {t('ContactRow.form.title')}
             </h3>
             <div className="mt-2 sm:flex sm:items-start sm:justify-between">
@@ -60,11 +60,7 @@ export default function ContactRow() {
               <div className="mt-5 sm:ml-6 sm:mt-0 sm:flex sm:flex-shrink-0 sm:items-center">
                 <Button
                   color="white"
-                  href={
-                    isJapanese
-                      ? siteConfig.contactFormJA
-                      : siteConfig.contactFormEN
-                  }
+                  href={siteConfig.discordInvitationLink}
                   target="_blank"
                   rel="noreferrer"
                   className=""

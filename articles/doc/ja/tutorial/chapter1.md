@@ -4,6 +4,10 @@ title: '第1章: 🚀 Solana バリデーターの完全ガイド - ゼロから
 description: この章では、Solana バリデーターとして成功するための第一歩を踏み出します。私たちは、solvという革新的なオープンソースツールを中心に、Solana バリデーターの設定と運用の全プロセスを詳細に解説します。solvは複雑なプロセスを簡単にし、効率的なノードの設定と運用を可能にします。
 ---
 
+※こちらの内容は Ver.2 までの古いものになっており、ただいま Ver.3 対応のため書き直し中です。もしご質問等ございましたら Epics DAO 公式 Discord サーバーまでお越しください。
+
+https://discord.gg/Z8M8rZeX8R
+
 この章では、Solana バリデーターとして成功するための第一歩を踏み出します。私たちは、solv という革新的なオープンソースツールを中心に、Solana バリデーターの設定と運用の全プロセスを詳細に解説します。solv は複雑なプロセスを簡単にし、効率的なノードの設定と運用を可能にします。
 
 まずは、Solana バリデーターとして推奨される環境設定について学びます。次に、solv CLI のインストール方法を紹介し、Solana バリデーターのために必要なキーの作成方法を説明します。また、Solana Testnet でのバリデーターとしての報酬と、テストネットで使用する SOL の準備についても触れます。
@@ -87,7 +91,7 @@ https://docs.solana.com/running-validator/validator-reqs
 を行います。
 
 ```bash
-sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/install-v1.7.0")"
+sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
 ```
 
 ### ✅ すでにローカルコンピューターに `npm` がある場合。
@@ -110,8 +114,8 @@ solv i
 solv setup --key
 ✅ Successfully Generated - ~/solvKeys/upload/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/upload/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/authority-keypair.json
+✅ Successfully Generated - ~/solvKeys/upload/testnet-vote-account-keypair.json
+✅ Successfully Generated - ~/solvKeys/upload/testbet-authority-keypair.json
 ```
 
 ログに各キーのアドレスが表示されるので、メモをしておくと後に便利です 💡
@@ -164,7 +168,7 @@ $ solana -um balance
 実行
 
 ```bash
-$ solana-foundation-delegation-program apply --mainnet mainnet-validator-keypair.json --testnet testnet-validator-keypair.json
+$ solana-foundation-delegation-program apply --mainnet ~/solvKeys/upload/mainnet-validator-keypair.json --testnet ~/solvKeys/upload/testnet-validator-keypair.json
 ```
 
 これを行なっていないと以下のフォームで弾かれます
@@ -174,7 +178,7 @@ https://solana.org/delegation-program
 
 テストネットバリデーターで投票に参加するには、年間およそ 315 テスト SOL 必要になります。
 その他に、自分のテストネットバリデーターにどのアカウントからでも数 SOL で良いのでステーキングを行うと進行が早まります。このテストネットでのステイキングは Phantom ウォレットのディベロッパー設定からネットワークをテストネットに変更することで行えます。
-(`vote-account-keypair.json`のアドレスにステイキング)
+(`testnet-vote-account-keypair.json`のアドレスにステイキング)
 
 ```bash
 $ solana airdrop 1
@@ -203,9 +207,7 @@ $ ssh username@<your-server-ip-address>
 
 そして solv ドキュメントページにあるステップ１のコードをコピー&ペーストして実行します。
 
-Edgevana と Latitude 版があるので、使用するタイプをタブで選択して下さい。
-
-ここでは TDS に参加することを想定し、`Edgevana`を選択します。
+ここでは TDS に参加することを想定しています。
 
 ```bash
 $ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
@@ -254,7 +256,7 @@ $ solv log -e
 以下のコマンドで現在のバリデーターの状態を確認することができます。
 
 ```bash
-solv monitor
+solv get monitor
 ```
 
 ## ⏹️ バリデーターの停止

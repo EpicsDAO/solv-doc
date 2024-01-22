@@ -15,14 +15,9 @@ const siteConfig = {
   twitterAccount: '@EpicsDAO2',
   instagramAccount: 'epics.dao',
   githubAccount: 'EpicsDAO',
-  githubRepo: 'https://github.com/EpicsDAO/solv2',
-  solvVersion: 'v1.6.2',
-  solv2Version: 'v2.1.6',
+  githubRepo: 'https://github.com/EpicsDAO/solv',
+  solvVersion: 'v3.0.0',
   discordInvitationLink: 'https://discord.gg/GmHYfyRamx',
-  contactFormJA: 'https://forms.gle/A9ysqtqhTgmcukMD9',
-  contactFormEN: 'https://forms.gle/GbDcSm4bcQanSK3s8',
-  enterpriseFormJA: 'https://discord.gg/7B9UfM7P6f',
-  enterpriseFormEN: 'https://discord.gg/vYfqTcH3dt',
   downloadPressKitsJA:
     'https://storage.googleapis.com/elsoul-holdings/elsoul-labo/PressKits/2023-08-03/ELSOUL%20LABO%20B.V.%20%E3%83%95%E3%82%9A%E3%83%AC%E3%82%B9%E3%82%AD%E3%83%83%E3%83%88.zip',
   downloadPressKitsEN:
