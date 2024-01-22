@@ -135,12 +135,17 @@ By participating in this program, it seems you can receive delegated stakes from
 Eligibility Criteria
 https://solana.org/delegation-criteria
 
+Solana Foundation Delegation Program Command-line Utility
+https://github.com/solana-foundation/stake-o-matic/tree/master/cli
+
 Furthermore, you need to sign your Pubkey with the following command (this step must be done on Ubuntu only):
 
 Installation
 
 ```bash
-$ sudo apt install libudev-dev
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ source "$HOME/.cargo/env"
+$ sudo apt install build-essential libssl-dev pkg-config libudev-dev libhidapi-dev
 $ cargo install solana-foundation-delegation-program-cli
 $ solana-foundation-delegation-program --version
 ```
@@ -148,17 +153,15 @@ $ solana-foundation-delegation-program --version
 Since the signing is done on the mainnet, a small amount of SOL is required.
 
 ```bash
+$ solana config set --url https://api.mainnet-beta.solana.com
 $ solana -um balance
 ```
 
 Execution
 
 ```bash
-$ solana-foundation-delegation-program apply --mainnet ~/solvKeys/upload/mainnet-validator-keypair.json --testnet ~/solvKeys/upload/testnet-validator-keypair.json
+$ solana-foundation-delegation-program apply --mainnet mainnet-validator-keypair.json --testnet testnet-validator-keypair.json
 ```
-
-If you do not complete this step, you will be rejected by the following form:
-https://solana.org/delegation-program
 
 ## 🌐 Preparing Testnet SOL
 
@@ -196,7 +199,7 @@ There are versions for Edgevana and Latitude, so please select the type you want
 Here, we assume participation in TDS and select `Edgevana`.
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
 ```
 
 This command will initially create a solv user, so you will need to set a password.

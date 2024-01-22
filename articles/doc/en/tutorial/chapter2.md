@@ -72,12 +72,12 @@ This completes the connection setup between your local computer and the validato
 
 ## 📦 Key Backup (Validator Node → Local Computer)
 
-In this step, we will introduce how to back up keys from the `validator node` to your `local computer`. The following four keys located in the `/mt/solana/` directory will be downloaded:
+In this step, we will introduce how to back up keys from the `validator node` to your `local computer`. The following four keys located in the `/mnt/` directory will be downloaded:
 
-- `/mt/solana/mainnet-validator-keypair.json`
-- `/mt/solana/testnet-validator-keypair.json`
-- `/mt/solana/vote-account-keypair.json`
-- `/mt/solana/authority-keypair.json`
+- `/mnt/mainnet-validator-keypair.json`
+- `/mnt/testnet-validator-keypair.json`
+- `/mnt/vote-account-keypair.json`
+- `/mnt/authority-keypair.json`
 
 ※ If you are uploading keys from your `local computer` to the `validator node`, please skip this step.
 
@@ -103,7 +103,7 @@ Execute the following command from your local computer and enter the IP address 
 
 All keys created in the previous chapters will be uploaded to the
 
-`/mt/solana`
+`/mnt`
 
 directory.
 (Note: It is recommended to always take a backup as existing files with the same name will be overwritten.)
@@ -165,7 +165,7 @@ solv update -b
 If you decide to monitor later, you can check with the following command:
 
 ```bash
-solv monitor
+solv get monitor
 ```
 
 In the next chapter, we will introduce how to monitor validator nodes in a serverless environment.

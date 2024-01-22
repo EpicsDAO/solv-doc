@@ -138,12 +138,17 @@ https://solana.org/delegation-program
 必要な条件
 https://solana.org/delegation-criteria
 
+Solana Foundation Delegation Program Command-line Utility
+https://github.com/solana-foundation/stake-o-matic/tree/master/cli
+
 さらに、以下のコマンドで Pubkey に署名を行う必要があります。(このフローのみ Ubuntu で行う必要があります）
 
 インストール
 
 ```bash
-$ sudo apt install libudev-dev
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ source "$HOME/.cargo/env"
+$ sudo apt install build-essential libssl-dev pkg-config libudev-dev libhidapi-dev
 $ cargo install solana-foundation-delegation-program-cli
 $ solana-foundation-delegation-program --version
 ```
@@ -152,13 +157,14 @@ $ solana-foundation-delegation-program --version
 多少の SOL が必要です。
 
 ```bash
+$ solana config set --url https://api.mainnet-beta.solana.com
 $ solana -um balance
 ```
 
 実行
 
 ```bash
-$ solana-foundation-delegation-program apply --mainnet ~/solvKeys/upload/mainnet-validator-keypair.json --testnet ~/solvKeys/upload/testnet-validator-keypair.json
+$ solana-foundation-delegation-program apply --mainnet mainnet-validator-keypair.json --testnet testnet-validator-keypair.json
 ```
 
 これを行なっていないと以下のフォームで弾かれます
@@ -202,7 +208,7 @@ Edgevana と Latitude 版があるので、使用するタイプをタブで選�
 ここでは TDS に参加することを想定し、`Edgevana`を選択します。
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v1.7.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
 ```
 
 このコマンドで最初に solv ユーザーを作成するので、

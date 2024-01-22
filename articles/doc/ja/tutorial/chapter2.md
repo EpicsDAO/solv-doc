@@ -73,12 +73,12 @@ solv scp create
 ## 📦 鍵のバックアップ（バリデーターノード → ローカルコンピュータ）
 
 このステップでは `バリデーターノード` から `ローカルコンピュータ` へ鍵のバックアップを取る方法を紹介します。
-`/mt/solana/` ディレクトリにある以下の 4 つの鍵がダウンロードされます。
+`/mnt/` ディレクトリにある以下の 4 つの鍵がダウンロードされます。
 
-- `/mt/solana/mainnet-validator-keypair.json`
-- `/mt/solana/testnet-validator-keypair.json`
-- `/mt/solana/vote-account-keypair.json`
-- `/mt/solana/authority-keypair.json`
+- `/mnt/mainnet-validator-keypair.json`
+- `/mnt/testnet-validator-keypair.json`
+- `/mnt/vote-account-keypair.json`
+- `/mnt/authority-keypair.json`
 
 ※鍵を `ローカルコンピュータ` から `バリデーターノード`へアップロードする方はこのステップをスキップして下さい。
 
@@ -106,7 +106,7 @@ solv scp backup
 
 に全章で作成された鍵が
 
-`/mt/solana`
+`/mnt`
 
 ディレクトリにアップロードされます。
 (※同じファイル名がある場合上書きされるので必ずバックアップを取ることをお勧めします。)
