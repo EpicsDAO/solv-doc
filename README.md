@@ -1,5 +1,5 @@
   <a href="https://solv.epics.dev/">
-    <img src="https://storage.googleapis.com/epics-bucket/Validator/solvOverview.png" alt="solv" />
+    <img src="https://storage.googleapis.com/epics-bucket/solv/assets/solven.jpg" alt="solv" />
   </a>
 <p align="center">
   <a href="https://twitter.com/intent/follow?screen_name=EpicsDAO2">
