@@ -61,7 +61,7 @@ export default function SolvFeaturesRow() {
             <div className="flex items-start justify-end lg:order-first">
               <Image
                 src="https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif"
-                alt="Skeet App"
+                alt="solv"
                 className="w-[52rem] shadow-xl sm:w-[64rem]"
                 width={2432}
                 height={1442}

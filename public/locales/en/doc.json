@@ -9,12 +9,8 @@
       "body": "Originally, this tool was developed to increase our development team and the entire community's operational efficiency."
     },
     "quickstart": {
-      "title": "Quickstart - For Latitude",
-      "body": "Describes the setup for getting started with the \"solv\"."
-    },
-    "quickstart-edgevana": {
-      "title": "Quickstart - For Edgevana",
-      "body": "Describes the setup for getting started with the \"solv\"."
+      "title": "Quickstart",
+      "body": "Learn to use solv in three easy steps! This guide quickly introduces you to the essentials of the solv."
     }
   },
   "menuNav": {
@@ -26,8 +22,8 @@
     },
     "quickstart": {
       "groupTitle": "Quickstart",
-      "latitude": "Latitude Server",
-      "edgevana": "Edgevana Server"
+      "start-solv": "Start solv",
+      "update-to-v3": "Update to Ver.3"
     },
     "tutorial": {
       "groupTitle": "Tutorial",

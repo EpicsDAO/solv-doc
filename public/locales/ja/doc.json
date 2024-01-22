@@ -9,12 +9,8 @@
       "body": "このツールは元々私たちの開発チーム・コミュニティ全体の運用効率化のために開発されました。"
     },
     "quickstart": {
-      "title": "クイックスタート - Latitudeサーバー",
-      "body": "solv を使い始めるための設定について説明します。"
-    },
-    "quickstart-edgevana": {
-      "title": "クイックスタート - Edgevanaサーバー",
-      "body": "solv を使い始めるための設定について説明します。"
+      "title": "クイックスタート",
+      "body": "solv を使い始めるための簡単3ステップについて説明します。"
     }
   },
   "menuNav": {
@@ -26,8 +22,8 @@
     },
     "quickstart": {
       "groupTitle": "クイックスタート",
-      "latitude": "Latitudeサーバー",
-      "edgevana": "Edgevanaサーバー"
+      "start-solv": "solv をはじめる",
+      "update-to-v3": "Ver.3 にアップデート"
     },
     "tutorial": {
       "groupTitle": "チュートリアル",
