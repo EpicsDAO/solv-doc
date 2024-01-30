@@ -27,6 +27,17 @@ $ cd ~ && source ~/.profile
 $ solv setup
 ```
 
+![](https://storage.googleapis.com/zenn-user-upload/949db29fc401-20240131.png)
+
+そして、対象となるノードの種類を選択します。
+
+- `TESTNET_VALIDATOR`
+- `MAINNET_VALIDATOR`
+- `RPC_NODE`
+
+起動後、スナップショットのダウンロードが自動で始まり、
+Solana バリデーターが起動します 🎊
+
 ## Solana バリデーターキーと設定の生成
 
 Solana バリデーターのキーと設定を生成するには、以下のコマンドを使用します。
@@ -47,6 +58,30 @@ $ solv setup
 
 起動後、スナップショットのダウンロードが自動で始まり、
 Solana バリデーターが起動します 🎊
+
+## インストール solv CLI - ローカルコンピューター
+
+solv CLI は、ローカルコンピューターから Solana バリデーターを管理するためのツールです。
+
+```bash
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
+```
+
+solv CLI ダッシュボードを開く - ローカルコンピューター
+
+```bash
+$ solv c
+```
+
+![Generate Keys](https://storage.googleapis.com/epics-bucket/solv/assets/generate-keys.png)
+
+## solv Server CLI を実行 - バリデーターサーバー
+
+```bash
+$ solv s
+```
+
+![solv s](https://storage.googleapis.com/epics-bucket/solv/assets/solv-s.png)
 
 ### Solana Delegation Program
 

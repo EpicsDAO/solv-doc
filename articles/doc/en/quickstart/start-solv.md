@@ -45,14 +45,40 @@ $ solv setup
 
 ![](https://storage.googleapis.com/zenn-user-upload/949db29fc401-20240131.png)
 
-This time select
+Then, select the type of node you want to target.
 
-`TESTNET_VALIDATOR`, `MAINNET_VALIDATOR`, or `RPC_NODE`.
+- `TESTNET_VALIDATOR`
+- `MAINNET_VALIDATOR`
+- `RPC_NODE`
 
 Then
 
 After startup, the snapshot download will start automatically.
 The Solana validator will start 🎊
+
+## Install solv CLI on your local machine
+
+solv CLI is a tool for managing Solana Validators from your local machine.
+
+```bash
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
+```
+
+Start solv CLI Dashboard - from your local machine
+
+```bash
+$ solv c
+```
+
+![Generate Keys](https://storage.googleapis.com/epics-bucket/solv/assets/generate-keys.png)
+
+## Run solv Server CLI - from your validator server
+
+```bash
+$ solv s
+```
+
+![solv s](https://storage.googleapis.com/epics-bucket/solv/assets/solv-s.png)
 
 ### Solana Delegation Program
 
