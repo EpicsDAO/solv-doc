@@ -38,27 +38,6 @@ $ solv setup
 起動後、スナップショットのダウンロードが自動で始まり、
 Solana バリデーターが起動します 🎊
 
-## Solana バリデーターキーと設定の生成
-
-Solana バリデーターのキーと設定を生成するには、以下のコマンドを使用します。
-
-_テストネットバリデーターとして参加する場合、約 500 のテストネット SOL（無料）が必要です。事前にテストネット SOL を入手し、生成された testnet-validator-keypair.json の pubkey に転送してください。_
-
-（TDS に参加する方向け：EpicsDAO ウォレットにテストネット SOL が残っている場合、提供します。詳細は Discord チャンネルにてご確認ください：https://discord.gg/Z8M8rZeX8R）
-
-```bash
-$ solv setup
-```
-
-![](https://storage.googleapis.com/zenn-user-upload/949db29fc401-20240131.png)
-
-そして、対象となるノードの種類を選択します。
-
-`TESTNET_VALIDATOR`, `MAINNET_VALIDATOR`, or `RPC_NODE`.
-
-起動後、スナップショットのダウンロードが自動で始まり、
-Solana バリデーターが起動します 🎊
-
 ## インストール solv CLI - ローカルコンピューター
 
 solv CLI は、ローカルコンピューターから Solana バリデーターを管理するためのツールです。
