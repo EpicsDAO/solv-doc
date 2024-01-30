@@ -30,7 +30,8 @@
       "chapter1": "1. Solana Setup",
       "chapter2": "2. Backup & Migrate",
       "chapter3": "3. Cloud & Monitor",
-      "chapter4": "4. Revenue Analysis"
+      "chapter4": "4. Revenue Analysis",
+      "chapter5": "5. Setup RPC Node"
     }
   },
   "headerNav": {

@@ -43,6 +43,17 @@ _If you're participating as a testnet validator, you'll need approximately 500 T
 $ solv setup
 ```
 
+![](https://storage.googleapis.com/zenn-user-upload/949db29fc401-20240131.png)
+
+This time select
+
+`TESTNET_VALIDATOR`, `MAINNET_VALIDATOR`, or `RPC_NODE`.
+
+Then
+
+After startup, the snapshot download will start automatically.
+The Solana validator will start 🎊
+
 ### Solana Delegation Program
 
 https://solana.org/delegation-program
@@ -117,7 +128,6 @@ Commands:
   log|l [options]      tail logs
   install|i [options]  Install/Update Solana Version
   stake                Solana Delegate Stake
-  check                Check Solana Validator
   get <cmd>            Get Solana Validator Info
   scp <cmd>            Download/Upload Solana Validator Keypairs
   cron <cmd>           Run Schedule Tasks

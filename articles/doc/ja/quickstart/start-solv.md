@@ -39,6 +39,15 @@ _テストネットバリデーターとして参加する場合、約 500 の�
 $ solv setup
 ```
 
+![](https://storage.googleapis.com/zenn-user-upload/949db29fc401-20240131.png)
+
+そして、対象となるノードの種類を選択します。
+
+`TESTNET_VALIDATOR`, `MAINNET_VALIDATOR`, or `RPC_NODE`.
+
+起動後、スナップショットのダウンロードが自動で始まり、
+Solana バリデーターが起動します 🎊
+
 ### Solana Delegation Program
 
 https://solana.org/delegation-program
@@ -111,7 +120,6 @@ $ solv --help
   log|l [オプション]    ログを表示
   install|i [オプション] Solanaのバージョンをインストール/更新
   stake                Solanaデリゲートステーク
-  check                Solanaバリデーターをチェック
   get <cmd>            Solanaバリデーター情報を取得
   scp <cmd>            Solanaバリデーターキーペアをダウンロード/アップロード
   cron <cmd>           スケジュールされたタスクを実行

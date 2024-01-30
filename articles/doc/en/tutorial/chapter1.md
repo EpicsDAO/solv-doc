@@ -12,6 +12,10 @@ In this chapter, we take the first steps towards success as a Solana validator. 
 
 First, we’ll learn about the recommended environment settings for Solana validators. Next, we introduce how to install solv CLI and explain how to create the necessary keys for a Solana validator. We also touch upon the rewards for validators in the Solana Testnet and preparing SOL for use in the testnet.
 
+(\* Added & updated on 2024/01/30 - Supports mainnet RPC nodes 🎊)
+
+https://solv.epics.dev/en/doc/tutorial/chapter5
+
 The content of this chapter includes concrete steps starting from how to connect to the server, install solv, update settings, and finally set up solv. We also provide guidance on how to check real logs, download snapshots, and guide you to solv hands-on videos on YouTube. Through this chapter, you will acquire the knowledge and tools needed to confidently embark on your journey as a Solana validator.
 
 📗 Official solv Documentation:
@@ -45,43 +49,42 @@ Minimum SOL Requirements
 | Reserve for the voting account needed for consensus | 0.02685864 SOL    |
 | Cost of sending a vote transaction per block        | Up to 1.1 SOL/day |
 
-CPU
+#### CPU
 
-- 12 cores / 24 threads or more
-- Base clock speed: 2.8GHz or higher
+- 12 cores/24 threads or more
+- 2.8GHz base clock speed or higher
+- Support for SHA extension instructions (AMD Gen 3 and later/Intel Ice Lake and later)
 
-RAM
+#### RAM
 
 - 256GB or more
-- Motherboard capacity of 512GB or more recommended
+- 512GB capacity motherboard recommended
 
-Disk
+#### Disc
 
-- PCIe Gen3 x4 NVME SSD or better
-- For accounts: 500GB or more, with high TBW (Total Bytes Written) support
-- For ledger: 1TB or more, high TBW recommended
-- For OS (optional): 500GB or more, SATA acceptable
+- PCIe Gen3 x4 NVME SSD or later
+- Accounts: 500GB or more. High TBW (total bytes written)
+- Ledger: 1TB or more. High TBW recommended
+- OS: (Optional) 500GB or more. SATA OK
+  _The OS may be installed on the ledger disk, but testing has shown that placing the ledger on its own disk provides better performance._
+  _Although it is possible to store accounts and ledgers on the same disk, this is not recommended due to high IOPS._
+  _Samsung 970 and 980 Pro series SSDs are popular in the verification community_
 
-CPU
+#### GPU
 
-- 16 cores / 32 threads or more
-
-RAM
-
-- If using account indexes: 512GB or more
+Not needed at this time
 
 Here is the detailed link.
 
-Minimum Requirements
+Minimum requirements
+
+https://docs.solana.com/running-validator/validator-reqs
 
 https://docs.solana.com/running-validator/validator-reqs
 
 ## 🔧 Installing solv CLI
 
 First, install `solv CLI` in your local environment.
-
-### 📦 If `npm` is not installed on your local computer
-
 With the following one-liner command, you can install:
 
 - `solana CLI`
@@ -93,31 +96,39 @@ With the following one-liner command, you can install:
 sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
 ```
 
-### ✅ If `npm` is already installed on your local computer.
+## Running solv CLI
 
 ```bash
-npm i -g @epics-dao/solv
+solv c
 ```
 
-Next, install solana.
-
-```bash
-solv i
-```
+![Generate Keys](https://storage.googleapis.com/epics-bucket/solv/assets/generate-keys.png)
 
 ## 🔑 Creating Necessary Keys for Solana Validators
 
-The following command will create four keys:
+Start the solv client and
+
+Choose: `3) Generate Validator Keyfiles`
 
 ```bash
-solv setup --key
-✅ Successfully Generated - ~/solvKeys/upload/testnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/testnet-vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/testnet-authority-keypair.json
+Generated keypairs - /Users/fumi/solvKeys/upload
+Config File: /Users/fumi/.config/solana/cli/config.yml
+RPC URL: https://api.mainnet-beta.solana.com
+WebSocket URL: wss://api.mainnet-beta.solana.com/ (computed)
+Keypair Path: /Users/fumi/solvKeys/upload/mainnet-validator-keypair.json
+Commitment: confirmed
+Updated /Users/fumi/solv.config.json with new values.
 ```
 
-The addresses for each key will be displayed in the log, so it's helpful to take note of them for future reference 💡
+Six keys will be created in the `~/solvKeys` directory as shown below.
+Please use different keys as necessary.
+
+```bash
+ls ~/solvKeys/upload
+mainnet-authority-keypair.json    testnet-authority-keypair.json
+mainnet-validator-keypair.json    testnet-validator-keypair.json
+mainnet-vote-account-keypair.json testnet-vote-account-keypair.json
+```
 
 ## 💰 Rewards for Solana Testnet Validators
 
@@ -194,7 +205,7 @@ $ ssh username@<your-server-ip-address>
 
 ## 🚀 Step 1 - Installing solv
 
-![](https://storage.googleapis.com/zenn-user-upload/a22b0f8a1bf9-20231110.png)
+![](https://storage.googleapis.com/epics-bucket/solv/assets/solv-top-en.png)
 
 Next, copy and paste the code from Step 1 on the solv documentation page and execute it.
 
@@ -227,7 +238,19 @@ Finally, execute the code for Step 3 to complete the setup!
 $ solv setup
 ```
 
-With this, the Solana validator has been successfully launched 🎊
+This time, select `TESTNET_VALIDATOR`.
+
+Supported mainnet RPC_NODE from solv3.
+For this, please refer to Chapter 5 on how to build a Solana RPC node.
+
+https://solv.epics.dev/en/doc/tutorial/chapter5/
+
+After startup, the snapshot download will start automatically.
+The Solana validator will start 🎊
+
+Do not actually use the key created in this flow, but replace it with the key created from the solv client.
+
+Once you have stopped the server, please refer to the next chapter 2 for uploading the key.
 
 ## 📜 Checking Logs
 
@@ -265,3 +288,4 @@ In the next chapter, we will discuss how to exchange and update the keys.
 
 YouTube: "Launch a Solana Validator in 3 Steps! Easily and Effortlessly Operate a Blockchain Validator on Edgevana using solv" - Now supports TDS 🎉
 https://www.youtube.com/watch?v=7nloPjyrk_8
+(The content of this video is the previous version of solv2 or lower.)

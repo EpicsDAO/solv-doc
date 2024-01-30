@@ -114,6 +114,11 @@ export const docMenuNav = [
         href: '/doc/tutorial/chapter4/',
         icon: ChartBarIcon,
       },
+      {
+        name: 'doc:menuNav.tutorial.chapter5',
+        href: '/doc/tutorial/chapter5/',
+        icon: ChartBarIcon,
+      },
     ],
   },
 ]

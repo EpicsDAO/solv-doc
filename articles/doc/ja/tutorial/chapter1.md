@@ -4,13 +4,13 @@ title: '第1章: 🚀 Solana バリデーターの完全ガイド - ゼロから
 description: この章では、Solana バリデーターとして成功するための第一歩を踏み出します。私たちは、solvという革新的なオープンソースツールを中心に、Solana バリデーターの設定と運用の全プロセスを詳細に解説します。solvは複雑なプロセスを簡単にし、効率的なノードの設定と運用を可能にします。
 ---
 
-※こちらの内容は Ver.2 までの古いものになっており、ただいま Ver.3 対応のため書き直し中です。もしご質問等ございましたら Epics DAO 公式 Discord サーバーまでお越しください。
-
-https://discord.gg/Z8M8rZeX8R
-
 この章では、Solana バリデーターとして成功するための第一歩を踏み出します。私たちは、solv という革新的なオープンソースツールを中心に、Solana バリデーターの設定と運用の全プロセスを詳細に解説します。solv は複雑なプロセスを簡単にし、効率的なノードの設定と運用を可能にします。
 
 まずは、Solana バリデーターとして推奨される環境設定について学びます。次に、solv CLI のインストール方法を紹介し、Solana バリデーターのために必要なキーの作成方法を説明します。また、Solana Testnet でのバリデーターとしての報酬と、テストネットで使用する SOL の準備についても触れます。
+
+（※2024/01/30 追記&更新 - メインネット RPC ノードに対応 🎊）
+
+https://solv.epics.dev/ja/doc/tutorial/chapter5
 
 本章の内容は、サーバーへの接続方法から始まり、solv のインストール、設定の更新、そして solv セットアップまでの具体的なステップを含んでいます。実際のログの確認方法、スナップショットのダウンロード手順、さらに YouTube での solv ハンズオン動画への案内も提供します。この章を通じて、Solana バリデーターとしての道のりを確実に歩むための知識とツールを身につけることができます。
 
@@ -44,30 +44,33 @@ Solana Validator に必要なコンピューター環境は、他のブロック
 | 合意参加に必要な投票アカウントのリザーブ         | 0.02685864 SOL  |
 | 各ブロックごとの投票トランザクション送信のコスト | 最大 1.1 SOL/日 |
 
-CPU
+ハードウェアの推奨事項
+以下のハードウェアの推奨事項はガイドとして提供されています。オペレータは独自のパフォーマンス テストを行うことが推奨されます。
 
-- 12 コア / 24 スレッド以上
-- ベースクロック速度: 2.8GHz 以上
+#### CPU
 
-RAM
+- 12 コア/24 スレッド以上
+- 2.8GHz の基本クロック速度以上
+- SHA 拡張命令のサポート(AMD Gen 3 以降/Intel Ice Lake 以降)
+
+#### RAM
 
 - 256GB 以上
-- 512GB 以上のマザーボード容量推奨
+- 512GB 容量のマザーボードを推奨
 
-ディスク
+#### ディスク
 
-- PCIe Gen3 x4 NVME SSD またはそれ以上
-- アカウント用: 500GB 以上、高い TBW（Total Bytes Written）対応
-- Ledger 用: 1TB 以上、高い TBW 推奨
-- OS 用（オプション）: 500GB 以上、SATA でも可
+- PCIe Gen3 x4 NVME SSD 以降
+- Accounts: 500GB 以上。高い TBW (総書き込みバイト数)
+- Ledger: 1TB 以上。高い TBW を推奨
+- OS: (オプション) 500GB 以上。 SATA OK
+  ※ OS はレジャー ディスクにインストールされる可能性がありますが、テストではレジャーを専用のディスクに置いた方がパフォーマンスが向上することが示されています。
+  アカウントと台帳を同じディスクに保存できますが、IOPS が高いため、これはお勧めできません。
+  Samsung 970 および 980 Pro シリーズ SSD は検証コミュニティで人気があります
 
-CPU
+#### GPU
 
-- 16 コア / 32 スレッド以上
-
-RAM
-
-- アカウントインデックスを使用する場合: 512GB 以上
+現時点では必要ありません
 
 こちら詳細リンクになります。
 
@@ -79,8 +82,6 @@ https://docs.solana.com/running-validator/validator-reqs
 
 ますはローカル環境に `solv CLI` をインストールします。
 
-### 📦 ローカルコンピューターに `npm` がない場合
-
 以下のワンコマンドで
 
 - `solana CLI` のインストール
@@ -91,34 +92,44 @@ https://docs.solana.com/running-validator/validator-reqs
 を行います。
 
 ```bash
-sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
+sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.1/install")"
 ```
 
-### ✅ すでにローカルコンピューターに `npm` がある場合。
+## solv Client の起動
 
 ```bash
-npm i -g @epics-dao/solv
+solv c
 ```
 
-次に solana をインストールします。
-
-```bash
-solv i
-```
+![](https://storage.googleapis.com/zenn-user-upload/313f2c82514f-20240130.png)
 
 ## 🔑 Solana バリデーターのために必要なキーを作成する
 
-以下のコマンドで４つのキーが作成されます。
+solv クライアントを起動し、
+
+`3)バリデーターの鍵を作成`
+
+を選択します。
 
 ```bash
-solv setup --key
-✅ Successfully Generated - ~/solvKeys/upload/testnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/mainnet-validator-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/testnet-vote-account-keypair.json
-✅ Successfully Generated - ~/solvKeys/upload/testbet-authority-keypair.json
+Generated keypairs - /Users/fumi/solvKeys/upload
+Config File: /Users/fumi/.config/solana/cli/config.yml
+RPC URL: https://api.mainnet-beta.solana.com
+WebSocket URL: wss://api.mainnet-beta.solana.com/ (computed)
+Keypair Path: /Users/fumi/solvKeys/upload/mainnet-validator-keypair.json
+Commitment: confirmed
+Updated /Users/fumi/solv.config.json with new values.
 ```
 
-ログに各キーのアドレスが表示されるので、メモをしておくと後に便利です 💡
+`~/solvKeys` ディレクトリに下記のように６つ鍵が作成されます。
+必要に応じて鍵を使い分けてください。
+
+```bash
+ls ~/solvKeys/upload
+mainnet-authority-keypair.json    testnet-authority-keypair.json
+mainnet-validator-keypair.json    testnet-validator-keypair.json
+mainnet-vote-account-keypair.json testnet-vote-account-keypair.json
+```
 
 ## 💰 Solana Testnet バリデーターの報酬について
 
@@ -142,19 +153,16 @@ https://solana.org/delegation-program
 必要な条件
 https://solana.org/delegation-criteria
 
-Solana Foundation Delegation Program Command-line Utility
-https://github.com/solana-foundation/stake-o-matic/tree/master/cli
-
 さらに、以下のコマンドで Pubkey に署名を行う必要があります。(このフローのみ Ubuntu で行う必要があります）
 
 インストール
 
 ```bash
-$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-$ source "$HOME/.cargo/env"
-$ sudo apt install build-essential libssl-dev pkg-config libudev-dev libhidapi-dev
-$ cargo install solana-foundation-delegation-program-cli
-$ solana-foundation-delegation-program --version
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+sudo apt install build-essential libssl-dev pkg-config libudev-dev libhidapi-dev
+cargo install solana-foundation-delegation-program-cli
+solana-foundation-delegation-program --version
 ```
 
 署名を行うのにはメインネットで行うため、
@@ -178,7 +186,7 @@ https://solana.org/delegation-program
 
 テストネットバリデーターで投票に参加するには、年間およそ 315 テスト SOL 必要になります。
 その他に、自分のテストネットバリデーターにどのアカウントからでも数 SOL で良いのでステーキングを行うと進行が早まります。このテストネットでのステイキングは Phantom ウォレットのディベロッパー設定からネットワークをテストネットに変更することで行えます。
-(`testnet-vote-account-keypair.json`のアドレスにステイキング)
+(`vote-account-keypair.json`のアドレスにステイキング)
 
 ```bash
 $ solana airdrop 1
@@ -203,14 +211,12 @@ $ ssh username@<your-server-ip-address>
 
 ## 🚀 ステップ１ - solv のインストール
 
-![](https://storage.googleapis.com/zenn-user-upload/a22b0f8a1bf9-20231110.png)
+![](https://storage.googleapis.com/zenn-user-upload/100005a6fe39-20240130.png)
 
 そして solv ドキュメントページにあるステップ１のコードをコピー&ペーストして実行します。
 
-ここでは TDS に参加することを想定しています。
-
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
+sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
 ```
 
 このコマンドで最初に solv ユーザーを作成するので、
@@ -235,7 +241,27 @@ $ cd ~ && source ~/.profile
 $ solv setup
 ```
 
-これで無事に Solana バリデーターが起動しました 🎊
+![](https://storage.googleapis.com/zenn-user-upload/949db29fc401-20240131.png)
+
+今回は `TESTNET_VALIDATOR` を選択します。
+
+solv3 からメインネットの RPC_NODE に対応しました。
+こちらは５章の Solana RPC ノードの建て方を参考にしてみてください。
+
+https://zenn.dev/fumisouls/books/971a5ba1212303/viewer/201fd5
+
+起動後、スナップショットのダウンロードが自動で始まり、
+Solana バリデーターが起動します 🎊
+
+実際にこのフローで作成した鍵は使わずに solv クライアントから作成した鍵に書き換えます。
+
+一度サーバーを停止後に、次の 2 章の鍵のアップロードを参考にしてください。
+
+```bash
+solv stop
+```
+
+https://zenn.dev/fumisouls/books/971a5ba1212303/viewer/f10404
 
 ## 📜 ログの確認
 
@@ -274,3 +300,4 @@ solv stop
 
 YouTube: 「3 ステップで Solana バリデーター立ち上げ！solv を使って Edgevana 上でブロックチェーンバリデーターを簡単に手間なく運用」- TDS に対応しました 🎉
 https://www.youtube.com/watch?v=7nloPjyrk_8
+（この動画の内容は過去の solv2 以下のバージョンとなっております。）

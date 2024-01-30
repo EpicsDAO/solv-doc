@@ -485,19 +485,3 @@ While a simple setup may suffice in the early stages, as your project grows, con
 For instructions on how to configure a load balancer and Google Cloud Armor, please refer to the following link:
 
 https://skeet.dev/en/doc/skeet-firestore/initial-deploy/
-
-## 🎉 Conclusion: Completing the Journey as a Solana Validator and an Invitation to the EpicsDAO Community
-
-Through this book, we have provided a comprehensive guide for walking the path as a validator on the Solana network. We aimed to clearly explain all the steps from setting up to operating and updating a Solana validator, from beginners to advanced users, so that each reader could acquire the knowledge and tools necessary for success in this field.
-
-Particularly important is the introduction of an open-source tool called 'solv'. This tool has significantly simplified the setup and operation of Solana validators, making the process quicker and more efficient. From secure secret key management to efficient node reconstruction, this book will be a solid support for you to thrive as a Solana validator.
-
-The journey from Chapter 1 to Chapter 4 is not just about technical learning; it is a significant step towards forging the future of blockchain. With this book in hand, you become a part of the Solana network, capable of creating new value and contributing to the evolution of blockchain technology.
-
-Now that you have completed this guide, we recommend joining the EpicsDAO Discord channel for further interaction and learning. Here, like-minded developers gather to share experiences and knowledge, supporting each other. Your step forward will carve a new chapter in the future of blockchain.
-
-Invitation link to the EpicsDAO Discord channel:
-
-https://discord.gg/jZQ33byATb
-
-Let's learn and grow together, exploring the possibilities of new projects. We look forward to your participation.

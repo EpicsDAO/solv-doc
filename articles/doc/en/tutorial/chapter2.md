@@ -4,10 +4,6 @@ title: 'Chapter 2: 🔐🚚 The Complete Guide to Security and Transfer — Safe
 description: In this chapter, we will explain in detail how to safely manage secret keys.We provide practical guidelines on how to back up keys, securely exchange them, and the restart process in emergencies.
 ---
 
-※ This content is outdated, up to Version 2, and is currently being rewritten for Version 3. If you have any questions, please visit the Epics DAO official Discord server.
-
-https://discord.gg/Z8M8rZeX8R
-
 Security is at the core of validator operations. In this chapter, we will explain in detail how to safely manage secret keys. We provide practical guidelines on how to back up keys, securely exchange them, and the restart process in emergencies. We also focus on the latest security measures to ensure our readers can continue their validator operations with confidence.
 
 ## 🗝️ Creating SSH Keys - Building a Strong Access Foundation
@@ -64,31 +60,66 @@ su solv
 cd ~ && source ~/.profile
 ```
 
-Next, set up the SSH connection with the following command.
+Next, launch the dashboard with solv s.
 
 ```bash
-solv scp create
-? Enter your SSH Public Key (xxxxxxxpubkeyxxxxxxxx)
+solv s
 ```
 
-Paste the SSH public key you copied earlier here.
-This completes the connection setup between your local computer and the validator node.
+![](https://storage.googleapis.com/epics-bucket/solv/assets/backup-keys.png)
+
+`4) Key backup/restore`
+
+After selecting
+
+`1) Back up the validator key`
+
+Choose.
+
+Now paste the SSH public key you copied above.
+The connection settings between the local computer and the validator node are now complete.
+
+## 🔀 Key Exchange (Local Computer → Validator Node)
+
+Next, launch the solv client from your local computer.
+
+```
+solv c
+```
+
+![](https://storage.googleapis.com/epics-bucket/solv/assets/download-keys.png)
+
+`4) Upload validator key`
+
+and enter the IP of the validator node displayed above.
+
+`~/solvKeys/upload`
+
+The keys created in all chapters are
+
+`/home/solv/`
+
+will be uploaded to the directory.
+(\*If a file with the same name exists, it will be overwritten, so we recommend that you make a backup.)
 
 ## 📦 Key Backup (Validator Node → Local Computer)
 
-In this step, we will introduce how to back up keys from the `validator node` to your `local computer`. The following four keys located in the `/home/solv` directory will be downloaded:
+In this step, we will introduce how to back up keys from the `validator node` to your `local computer`.
+The following four keys located in the `/home/solv` directory will be downloaded:
 
-- `/home/solv/mainnet-validator-keypair.json`
-- `/home/solv/testnet-validator-keypair.json`
-- `/home/solv/testnet-vote-account-keypair.json`
-- `/home/solv/testnet-authority-keypair.json`
-
-※ If you are uploading keys from your `local computer` to the `validator node`, please skip this step.
-
-Execute the following command from your local computer. Please enter the IP address of your validator node server.
+Start the solv client.
 
 ```bash
-solv scp download
+solv c
+```
+
+![](https://storage.googleapis.com/epics-bucket/solv/assets/upload-keys.png)
+
+`2) Download validator key`
+
+and enter the validator node server IP displayed above as well.
+
+```bash
 ? Enter your Ubuntu Server IP (1.1.1.1)
 ✅ Successfully Generated - ~/solvKeys/download/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/download/mainnet-validator-keypair.json
@@ -98,24 +129,6 @@ solv scp download
 
 The keys have been saved in the `~/solvKeys/download` directory 🎉
 It is recommended to keep these keys safe and back them up on a USB disk or similar storage device.
-
-## 🔀 Key Exchange (Local Computer → Validator Node)
-
-Execute the following command from your local computer and enter the IP address of the validator node.
-
-`~/solvKeys/upload`
-
-All keys created in the previous chapters will be uploaded to the
-
-`~/solvKeys/upload`
-
-directory.
-(Note: It is recommended to always take a backup as existing files with the same name will be overwritten.)
-
-```bash
-solv scp upload
-? Enter your Ubuntu Server IP (1.1.1.1)
-```
 
 ## 🔍 Finding Keys
 
@@ -163,13 +176,19 @@ If you see `ready to restart` in the logs, the update has been completed success
 If you want to skip monitoring, you can complete the update with:
 
 ```bash
-solv update -b
+solv update && solv update -b
 ```
 
 If you decide to monitor later, you can check with the following command:
 
 ```bash
 solv get monitor
+```
+
+To display the difference up to the current slot, enter the following command:
+
+```bash
+solv get catchup
 ```
 
 In the next chapter, we will introduce how to monitor validator nodes in a serverless environment.

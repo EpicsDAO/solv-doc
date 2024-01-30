@@ -27,10 +27,11 @@
     },
     "tutorial": {
       "groupTitle": "チュートリアル",
-      "chapter1": "1. Solanaバリデーター設定",
+      "chapter1": "1. Solanaバリデーター構築",
       "chapter2": "2. バックアップと移転",
       "chapter3": "3. クラウドとSolana監視",
-      "chapter4": "4. 収益管理と分析"
+      "chapter4": "4. 収益管理と分析",
+      "chapter5": "5. RPCノードの構築"
     }
   },
   "headerNav": {

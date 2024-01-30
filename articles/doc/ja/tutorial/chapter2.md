@@ -4,10 +4,6 @@ title: '第2章: 🔐🚚 セキュリティと移転の完全ガイド - シー
 description: この章では、シークレットキーの安全な管理方法を詳しく説明します。バックアップの取り方、キーの安全な交換方法、そして緊急時のリスタートプロセスについて、実践的なガイドラインを提供します。
 ---
 
-※こちらの内容は Ver.2 までの古いものになっており、ただいま Ver.3 対応のため書き直し中です。もしご質問等ございましたら Epics DAO 公式 Discord サーバーまでお越しください。
-
-https://discord.gg/Z8M8rZeX8R
-
 セキュリティはバリデーター運営の中心です。この章では、シークレットキーの安全な管理方法を詳しく説明します。バックアップの取り方、キーの安全な交換方法、そして緊急時のリスタートプロセスについて、実践的なガイドラインを提供します。読者が安心してバリデーター運用を続けられるよう、最新のセキュリティ対策にも焦点を当てます。
 
 ## 🗝️ SSH 鍵の作成 - 強固なアクセス基盤の構築
@@ -64,33 +60,66 @@ su solv
 cd ~ && source ~/.profile
 ```
 
-次に以下のコマンドで SSH 接続設定を行います。
+次に solv s でダッシュボードを起動します。
 
 ```bash
-solv scp create
-? Enter your SSH Public Key (xxxxxxxpubkeyxxxxxxxx)
+solv s
 ```
+
+![](https://storage.googleapis.com/zenn-user-upload/56fad7671425-20240131.png)
+
+`4) 鍵のバックアップ・リストア`
+
+を選択後、
+
+`1) バリデーターの鍵をバックアップ`
+
+を選択します。
 
 ここで上記でコピーした SSH 公開鍵を貼り付けます。
 これでローカルコンピューターとバリデーターノードの接続設定が完了しました。
 
+## 🔀 鍵の交換（ローカルコンピュータ → バリデーターノード）
+
+続いて、ローカルコンピュータから solv クライアントを立ち上げます。
+
+```
+solv c
+```
+
+![](https://storage.googleapis.com/zenn-user-upload/b144e59188aa-20240131.png)
+
+`4) バリデーターの鍵をアップロード`
+
+を選択し、上記で表示されたバリデーターノードの IP を入力すると
+
+`~/solvKeys/upload`
+
+に全章で作成された鍵が
+
+`/home/solv/`
+
+ディレクトリにアップロードされます。
+(※同じファイル名がある場合上書きされるので必ずバックアップを取ることをお勧めします。)
+
 ## 📦 鍵のバックアップ（バリデーターノード → ローカルコンピュータ）
 
-このステップでは `バリデーターノード` から `ローカルコンピュータ` へ鍵のバックアップを取る方法を紹介します。
-`/home/solv` ディレクトリにある以下の 4 つの鍵がダウンロードされます。
+このステップでは ローカルコンピューターを使用して、
+バリデーターの鍵を`バリデーターノード` から `ローカルコンピュータ` へ鍵のバックアップを取る方法を紹介します。
 
-- `/home/solv/mainnet-validator-keypair.json`
-- `/home/solv/testnet-validator-keypair.json`
-- `/home/solv/testnet-vote-account-keypair.json`
-- `/home/solv/testnet-authority-keypair.json`
-
-※鍵を `ローカルコンピュータ` から `バリデーターノード`へアップロードする方はこのステップをスキップして下さい。
-
-ローカルコンピュータから以下のコマンドを実行します。
-バリデーターノードサーバーの IP を入力してください
+solv クライアントを起動します。
 
 ```bash
-solv scp download
+solv c
+```
+
+![](https://storage.googleapis.com/zenn-user-upload/9f53f38d22ef-20240131.png)
+
+`2) バリデーターの鍵をダウンロード`
+
+を選択し、同様に上記で表示されたバリデーターノードサーバーの IP を入力してください。
+
+```bash
 ? Enter your Ubuntu Server IP (1.1.1.1)
 ✅ Successfully Generated - ~/solvKeys/download/testnet-validator-keypair.json
 ✅ Successfully Generated - ~/solvKeys/download/mainnet-validator-keypair.json
@@ -100,25 +129,6 @@ solv scp download
 
 `~/solvKeys/download` ディレクトリに鍵が保存されました 🎉
 この鍵は大切に保管し、USB ディスクなどにバックアップをとっておくことをお勧めします。
-
-## 🔀 鍵の交換（ローカルコンピュータ → バリデーターノード）
-
-ローカルコンピュータから以下のコマンドを実行し、
-バリデーターノードの IP を入力します。
-
-`~/solvKeys/upload`
-
-に全章で作成された鍵が
-
-`~/solvKeys/upload`
-
-ディレクトリにアップロードされます。
-(※同じファイル名がある場合上書きされるので必ずバックアップを取ることをお勧めします。)
-
-```bash
-solv scp upload
-? Enter your Ubuntu Server IP (1.1.1.1)
-```
 
 ## 🔍 鍵を探す
 
@@ -141,7 +151,9 @@ Only showing the first 10 results
 
 ## 🔄 バリデーターノードの再起動
 
-交換した鍵を反映させるために、バリデーターノード内で以下のコマンドを実行しノードを再起動します。
+交換した鍵を反映させるために、
+バリデーターサーバーにログインし、
+以下のコマンドを実行し、バリデーターノードを再起動します。
 
 ```bash
 solv restart --snapshot
@@ -166,17 +178,22 @@ solv update --monitor
 `ready to restart` とログに表示されれば無事に完了です。
 
 モニタリングをスキップする場合は、
+以下のコマンドで更新を完了することができます。
 
 ```bash
-solv update -b
+solv update && solv update -b
 ```
-
-で更新を完了することができます。
 
 あとからモニターする場合でも以下のコマンドで確認することができます。
 
 ```bash
 solv get monitor
+```
+
+現在のスロットまでの差を表示するには以下のコマンドを入力します。
+
+```bash
+solv get catchup
 ```
 
 次の章ではサーバーレス環境でバリデーターノードを監視する方法についてご紹介したいと思います。
