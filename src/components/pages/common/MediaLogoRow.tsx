@@ -7,7 +7,7 @@ import RakutenLogo from '@/assets/img/logo/media/rakuten.svg'
 import YomiuriLogo from '@/assets/img/logo/media/yomiuri.svg'
 import TBSLogo from '@/assets/img/logo/media/tbs.png'
 import AsahiLogo from '@/assets/img/logo/media/asahi.svg'
-import GendaiLogo from '@/assets/img/logo/media/gendai.png'
+import CoinPostLogo from '@/assets/img/logo/media/coinpost.png'
 import { useTranslation } from 'next-i18next'
 
 export default function MediaLogoRow() {
@@ -40,24 +40,24 @@ export default function MediaLogoRow() {
                 {
                   name: '読売新聞',
                   logo: YomiuriLogo,
-                  link: 'https://yab.yomiuri.co.jp/adv/feature/release/detail/000000055000105962.html',
+                  link: 'https://yab.yomiuri.co.jp/adv/feature/release/detail/000000090000105962.html',
                 },
               ],
               [
                 {
                   name: 'TBS',
                   logo: TBSLogo,
-                  link: 'https://newsdig.tbs.co.jp/articles/-/532228?display=1',
+                  link: 'https://newsdig.tbs.co.jp/articles/-/885218?display=1',
                 },
                 {
                   name: '朝日新聞',
                   logo: AsahiLogo,
-                  link: 'https://www.asahi.com/and/pressrelease/424039828/',
+                  link: 'https://www.asahi.com/and/pressrelease/424350513/',
                 },
                 {
-                  name: '現代ビジネス',
-                  logo: GendaiLogo,
-                  link: 'https://gendai.media/ud/pressrelease/64dee810760b06917c000040',
+                  name: 'CoinPost',
+                  logo: CoinPostLogo,
+                  link: 'https://coinpost.jp/?post_type=pressrelease&p=489167',
                 },
               ],
             ].map((group, groupIndex) => (
