@@ -29,7 +29,7 @@ $ solv s
 まずは初期設定のためにデフォルトの言語を設定します。
 
 ```bash
-Solv Version: v3.0.0
+Solv Version: v3.2.0
 
 ? Select Language (Use arrow keys)
   en

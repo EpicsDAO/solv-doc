@@ -55,7 +55,7 @@ Now you can select the mainnet for Jito MEV 🎉
 solv CLI is a tool for managing Solana Validators from your local machine.
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.2.0/install")"
 ```
 
 Start solv CLI Dashboard - from your local machine

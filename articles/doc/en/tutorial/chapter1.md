@@ -93,7 +93,7 @@ With the following one-liner command, you can install:
 - `solv CLI`
 
 ```bash
-sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
+sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.2.0/install")"
 ```
 
 ## Running solv CLI

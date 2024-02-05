@@ -49,7 +49,7 @@ Jito MEV のメインネットを選択できるようになりました 🎉
 solv CLI は、ローカルコンピューターから Solana バリデーターを管理するためのツールです。
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.0.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv-cli/v3.2.0/install")"
 ```
 
 solv CLI ダッシュボードを開く - ローカルコンピューター

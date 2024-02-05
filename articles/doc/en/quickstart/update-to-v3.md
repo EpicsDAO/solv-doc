@@ -29,7 +29,7 @@ $ solv s
 Set your default Language for initial setup
 
 ```bash
-Solv Version: v3.0.0
+Solv Version: v3.2.0
 
 ? Select Language (Use arrow keys)
 ❯ en
