@@ -38,6 +38,12 @@ $ solv setup
 起動後、スナップショットのダウンロードが自動で始まり、
 Solana バリデーターが起動します 🎊
 
+## New Jito MEV Setup
+
+Jito MEV のメインネットを選択できるようになりました 🎉
+
+![](https://storage.googleapis.com/epics-bucket/solv/assets/mainnet-select.png)
+
 ## インストール solv CLI - ローカルコンピューター
 
 solv CLI は、ローカルコンピューターから Solana バリデーターを管理するためのツールです。

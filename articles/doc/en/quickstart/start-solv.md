@@ -31,21 +31,9 @@ $ solv setup
 
 [![solv](https://storage.googleapis.com/epics-bucket/Validator/solv-install-top.gif)](https://youtu.be/rY4bajhRJgw)
 
-## Generate Solana Validator Keys and Config
-
-To generate keys and configuration for a Solana validator, use the following command.
-
-_If you're participating as a testnet validator, you'll need approximately 500 Testnet SOL (Free). Please acquire Testnet SOL in advance and transfer it to the address in the generated `testnet-validator-keypair.json`'s pubkey._
-
-(For those participating in TDS, if there's any remaining testnet SOL in the EpicsDAO wallet, we'll provide it. Please join our Discord channel for further details: https://discord.gg/Z8M8rZeX8R)
-
-```bash
-$ solv setup
-```
+And then, select the type of node you want to target.
 
 ![](https://storage.googleapis.com/zenn-user-upload/949db29fc401-20240131.png)
-
-Then, select the type of node you want to target.
 
 - `TESTNET_VALIDATOR`
 - `MAINNET_VALIDATOR`
@@ -55,6 +43,12 @@ Then
 
 After startup, the snapshot download will start automatically.
 The Solana validator will start 🎊
+
+## New Jito MEV Setup
+
+Now you can select the mainnet for Jito MEV 🎉
+
+![](https://storage.googleapis.com/epics-bucket/solv/assets/mainnet-select.png)
 
 ## Install solv CLI on your local machine
 
