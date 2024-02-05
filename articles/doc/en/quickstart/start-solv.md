@@ -24,7 +24,7 @@ Dive into the world of Solana, explore the capabilities of solv, and be part of 
 ## Solana Validator Setup
 
 ```bash
-$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.0.0/install")"
+$ sh -c "$(curl -sSfL "https://storage.googleapis.com/epics-bucket/resource/solv/v3.2.0/install")"
 $ cd ~ && source ~/.profile
 $ solv setup
 ```
