@@ -2,7 +2,7 @@
 id: solv-can-build-jito-mev-mainnet-validator
 title: オープンソースのsolvでSolanaメインネットにおいてより高収益効率のJito MEVクライアントをビルド可能に
 category: プレスリリース
-thumbnail: /news/2024/02/06/solv-can-build-jito-mev-mainnet-validatorJA.jpg
+thumbnail: /news/2024/02/06/solvCanBuildJitoMevMainnetValidatorJA.jpg
 ---
 
 ELSOUL LABO B.V. (エルソウルラボ、本社: オランダ・アムステルダム、代表取締役 CEO: 川崎文武)および、同社の運営するオープンソース開発を応援する Web3 プロジェクトで社会貢献型 NFT カードゲームの Epics DAO が共同で開発するオープンソースの Solana バリデーターツール「solv」について新バージョンとなる v3.2.0 をリリースしました。
