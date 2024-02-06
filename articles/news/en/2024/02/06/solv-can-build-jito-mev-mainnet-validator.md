@@ -2,7 +2,7 @@
 id: solv-can-build-jito-mev-mainnet-validator
 title: Building a Higher Revenue Efficiency Jito MEV Client on Solana Mainnet Made Possible with Open-Source solv
 category: Press Release
-thumbnail: /news/2024/02/06/solv-can-build-jito-mev-mainnet-validatorEN.jpg
+thumbnail: /news/2024/02/06/solvCanBuildJitoMevMainnetValidatorEN.jpg
 ---
 
 ELSOUL LABO B.V. (headquartered in Amsterdam, Netherlands, CEO: Fumitake Kawasaki) and its Web3 project aimed at supporting open-source development, Epics DAO, which develops a socially-contributing NFT card game, have jointly released a new version, v3.2.0, of their open-source Solana validator tool, "solv".
