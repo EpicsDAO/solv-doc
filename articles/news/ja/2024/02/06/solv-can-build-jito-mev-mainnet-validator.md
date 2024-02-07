@@ -11,17 +11,21 @@ solv v3.2.0 では、純正の Solana バリデータークライアントだけ
 
 ## より高収益効率の Jito MEV クライアントを立ち上げることが可能に
 
-![Solana Validator Tool - solv meets Jito MEV](/news/2024/02/06/solvJitoConsole.png)
-
 solv v3.2.0 では、Solana メインネットにおいて Jito MEV クライアントを立ち上げることが可能になりました。
 
 Jito MEV クライアントは、Solana メインネットにおいてより高収益効率を実現するためにカスタマイズされた Jito Labs 製のオープンソース Solana バリデータークライアントです。
+
+MEV (Maximal Extractable Value) とは、ブロックチェーンのマイナーやバリデーターがトランザクションの順序やタイミングの操作、その他の最適化を通じて追加収益を得る機会のことを指します。Solana や Ethreum を含む多くのブロックチェーンプラットフォームで見られるこの現象は、一部の参加者に利益をもたらす一方で、市場の不公平やセキュリティリスクを生じさせる可能性がありますが、Jito は、MEV の正と負の側面をバランス良く管理し、ネットワーク全体の利益を最大化するための新しいアプローチを提案しています。これにより、より公平で透明、安全なブロックチェーンエコシステムの実現を目指しています。
+
+![Jito Labs](/news/2024/02/06/JitoLabsTop.jpg)
 
 Jito Labs: https://www.jito.wtf/
 
 Jito Foundation: https://www.jito.network/
 
 GitHub (jito-solana): https://github.com/jito-foundation/jito-solana
+
+![Solana Validator Tool - solv meets Jito MEV](/news/2024/02/06/solvJitoConsole.png)
 
 今まで Jito MEV クライアントを立ち上げるためには、多少の専門知識と多くの設定やアップデートを行う必要がありましたが、solv ではほとんどの作業が自動化されているので、簡単 3 ステップにてどなたでも Jito MEV クライアントを立ち上げることができるようになりました。
 
