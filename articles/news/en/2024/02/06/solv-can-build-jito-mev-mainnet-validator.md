@@ -11,15 +11,21 @@ With solv v3.2.0, it's now possible to launch a custom Jito MEV client on the So
 
 ## Launching a Higher Revenue Efficiency Jito MEV Client is Now Possible
 
-![Solana Validator Tool - solv meets Jito MEV](/news/2024/02/06/solvJitoConsole.png)
+With solv v3.2.0, launching a Jito MEV client on the Solana mainnet has become possible.
 
-With solv v3.2.0, launching a Jito MEV client on the Solana mainnet has become possible. The Jito MEV client is an open-source Solana validator client customized by Jito Labs to achieve higher revenue efficiency on the Solana mainnet.
+The Jito MEV client is an open-source Solana validator client customized by Jito Labs to achieve higher revenue efficiency on the Solana mainnet.
+
+Maximal Extractable Value (MEV) refers to the opportunity for blockchain miners or validators to generate additional revenue through the manipulation of transaction order or timing, among other optimizations. This phenomenon, observed in many blockchain platforms including Solana and Ethereum, can benefit certain participants while potentially introducing market inequities and security risks. Jito proposes a new approach to managing both the positive and negative aspects of MEV, aiming to maximize the benefits for the entire network. Through this, Jito strives to achieve a more fair, transparent, and secure blockchain ecosystem.
+
+![Jito Labs](/news/2024/02/06/JitoLabsTop.jpg)
 
 Jito Labs: https://www.jito.wtf/
 
 Jito Foundation: https://www.jito.network/
 
 GitHub (jito-solana): https://github.com/jito-foundation/jito-solana
+
+![Solana Validator Tool - solv meets Jito MEV](/news/2024/02/06/solvJitoConsole.png)
 
 Previously, setting up a Jito MEV client required some specialized knowledge and numerous configurations and updates. However, with solv, most of the work is automated, allowing anyone to set up a Jito MEV client in just three simple steps.
 
