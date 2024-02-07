@@ -61,7 +61,7 @@ solv users can easily perform many settings and updates with just one command. S
 
 Technically adept open-source communities are encouraged to participate as validators. However, the barrier remains high as not all developers are familiar with specific blockchains. solv aims to lower this hurdle for participating as validators, enabling more open-source development communities to earn validator rewards and build a sustainable open-source development environment.
 
-This tool was originally developed to improve operational efficiency for our development team and the entire community. However, recognizing its significant value for Solana validators, the entire Solana community, and all open-source development communities, we have released solv as an open-source tool, making it freely available to all users.
+This tool was originally developed to improve operational efficiency for our development team and the wider community. However, believing it to be beneficial for Solana validators, the entire Solana community, and all open-source development communities, we have made solv available as an open-source tool, allowing all users to use it freely and at no cost.
 
 We hope you will give it a try.
 
