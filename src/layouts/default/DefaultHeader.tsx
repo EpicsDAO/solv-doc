@@ -55,17 +55,17 @@ export default function DefaultHeader() {
         >
           {({ close }) => (
             <>
-              <div className="flex items-center justify-between p-6 md:justify-start md:space-x-10">
-                <div className="flex justify-start lg:w-0 lg:flex-1">
+              <div className="flex items-center justify-between p-6 xl:justify-start xl:space-x-10">
+                <div className="flex justify-start xl:w-0 xl:flex-1">
                   <LogoHorizontalLink className="h-8 w-auto sm:h-10" />
                 </div>
-                <div className="-my-2 -mr-2 md:hidden">
+                <div className="-my-2 -mr-2 xl:hidden">
                   <Popover.Button className="inline-flex items-center justify-center  p-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500  dark:text-gray-50 dark:hover:bg-gray-700 dark:hover:text-gray-200">
                     <span className="sr-only">{t('common:openMenu')}</span>
                     <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
-                <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+                <Popover.Group as="nav" className="hidden space-x-10 xl:flex">
                   {defaultMainNav.map((nav) => (
                     <Link
                       key={`${nav.name} DefaultHeader.defaultMainNav`}
@@ -84,7 +84,7 @@ export default function DefaultHeader() {
                     {t('common:navs.defaultMainNav.contact')}
                   </a>
                 </Popover.Group>
-                <div className="hidden items-center justify-end gap-3 md:flex md:flex-1 lg:w-0">
+                <div className="hidden items-center justify-end gap-3 xl:flex xl:w-0 xl:flex-1">
                   <LanguageChanger />
                   <ColorModeChanger />
                   <a
@@ -128,7 +128,7 @@ export default function DefaultHeader() {
               >
                 <Popover.Panel
                   focus
-                  className="absolute inset-x-0 top-0 origin-top-right transform bg-white p-2 transition dark:bg-gray-900 md:hidden"
+                  className="absolute inset-x-0 top-0 origin-top-right transform bg-white p-2 transition dark:bg-gray-900 xl:hidden"
                 >
                   <div className=" shadow-lg ring-1 ring-black ring-opacity-5 ">
                     <div className="px-5 pt-5">

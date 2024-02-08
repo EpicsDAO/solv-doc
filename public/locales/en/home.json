@@ -1,17 +1,17 @@
 {
   "HeroRow": {
     "title": "The utility tool for Solana Validators",
-    "body": "solv simplifies Solana validator setup, monitoring, and the management."
+    "body": "solv is an open-source tool designed to simplify the setup and operation of Solana validators and RPC nodes."
   },
   "SolvFeaturesRow": {
     "subtitle": "Open-Source CLI Tool",
     "title": "For All Solana Validators",
-    "description": "By using solv, tasks such as the setup, operation, monitoring, alerting, and upgrading for Solana validators can be easily conducted.",
-    "feature1Title": "Promote Decentralization of the Solana Network",
-    "feature1Description": "Validator operations are simplified to enhance Solana's decentralization. This ensures an inclusive technological innovation where a transparent yet reliable validator network can be established.",
-    "feature2Title": "Reduce the workload and burden of validator operations",
-    "feature2Description": "solv simplifies validator operations, including settings and updates, and mitigates challenges like time zone differences. As a result, validators can focus more on other valuable activities.",
-    "feature3Title": "Strengthening the resources of the open-source community",
-    "feature3Description": "solv lowers the barriers to entry, enabling more open-source communities to earn validator rewards and supporting the establishment of a sustainable development environment."
+    "description": "By using solv, essential tasks such as setting up, operating, monitoring, alerting, and upgrading Solana validators and RPC nodes can be performed easily and without hassle.",
+    "feature1Title": "Promoting Decentralization of the Solana Network",
+    "feature1Description": "The operation of validators and RPC nodes is simplified to enhance the decentralization of Solana, aiming to create a technology-inclusive society where everyone can participate, building a reliable validator network with transparency.",
+    "feature2Title": "Reducing the Daily Operational Effort and Burden",
+    "feature2Description": "solv simplifies the operations of Solana validators and RPC nodes, mitigating challenges caused by time zones. This allows operators to focus on other valuable activities.",
+    "feature3Title": "Strengthening the Resources of the Open-Source Community",
+    "feature3Description": "By lowering the barriers to entry for operating Solana validators and RPC nodes, solv enables more open-source communities to earn validator rewards, supporting the construction of a sustainable development system."
   }
 }
