@@ -6,11 +6,19 @@
   "actions": {
     "motivation": {
       "title": "Motivation",
-      "body": "Originally, this tool was developed to increase our development team and the entire community's operational efficiency."
+      "body": "We believe it to be beneficial for all Solana validators, as well as the Solana community and the open-source development community, and have released it as open-source accordingly."
     },
     "quickstart": {
       "title": "Quickstart",
       "body": "Learn to use solv in three easy steps! This guide quickly introduces you to the essentials of the solv."
+    },
+    "tutorial": {
+      "title": "Tutorial",
+      "body": "A guide to actually starting the operation of a Solana validator using solv."
+    },
+    "update": {
+      "title": "Update to Ver.3",
+      "body": "Instructions for updating solv to Ver.3."
     }
   },
   "menuNav": {

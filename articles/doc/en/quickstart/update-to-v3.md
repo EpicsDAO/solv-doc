@@ -6,7 +6,7 @@ description: Update solv to Ver.3 - Open Source Solana Validator Tool
 
 ## Migrate Solv3 Instructions
 
-We updated the solv version to v3.0.0 to support the latest requirements of Solana Official Docs.
+We updated the solv version to Ver.3 to support the latest requirements of Solana Official Docs.
 
 ⭐️ Improved
 

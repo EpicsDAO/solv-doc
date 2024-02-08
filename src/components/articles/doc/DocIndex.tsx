@@ -5,6 +5,8 @@ import {
   HeartIcon,
   RocketLaunchIcon,
   ArrowUpRightIcon,
+  ArrowPathIcon,
+  AcademicCapIcon,
 } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 
@@ -24,6 +26,22 @@ const actions = [
     icon: RocketLaunchIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
+  },
+  {
+    title: 'doc:actions.tutorial.title',
+    body: 'doc:actions.tutorial.body',
+    href: '/doc/tutorial/chapter1',
+    icon: AcademicCapIcon,
+    iconForeground: 'text-green-700',
+    iconBackground: 'bg-green-50',
+  },
+  {
+    title: 'doc:actions.update.title',
+    body: 'doc:actions.update.body',
+    href: '/doc/quickstart/update-to-v3',
+    icon: ArrowPathIcon,
+    iconForeground: 'text-orange-700',
+    iconBackground: 'bg-orange-50',
   },
 ]
 
