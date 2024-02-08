@@ -6,6 +6,8 @@ description: Update solv to Ver.3 - Open Source Solana Validator Tool
 
 ## Migrate Solv3 Instructions
 
+![solv](https://storage.googleapis.com/epics-bucket/solv/assets/v3/solv3Released.jpg)
+
 We updated the solv version to Ver.3 to support the latest requirements of Solana Official Docs.
 
 ⭐️ Improved
