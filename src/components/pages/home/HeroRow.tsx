@@ -8,6 +8,9 @@ import siteConfig from '@/config/site'
 import { useCallback, useMemo, useState } from 'react'
 import { copyToClipboard } from '@/utils/userAction'
 import latitudeLogo from '@/assets/img/logo/partners/Latitude/latitudesh-logotype-dark.svg'
+import googleCloudLogo from '@/assets/img/logo/projects/GoogleCloudHorizontal.svg'
+import jitoFoundationLogo from '@/assets/img/logo/projects/JitoFoundation_Logo_Green.svg'
+
 import { BookOpenIcon } from '@heroicons/react/24/outline'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -77,11 +80,11 @@ export default function HomeHeroRow() {
             fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
           />
         </svg>
-        <Container className="flex flex-col justify-between gap-x-8 gap-y-24 py-24 md:flex-row lg:py-32">
+        <Container className="flex flex-col items-center justify-center gap-x-8 gap-y-24 py-24 lg:flex-row lg:items-start lg:justify-between lg:py-32">
           <div>
             <h1
               className={clsx(
-                'font-display mx-auto bg-gradient-to-t from-gray-600 via-gray-700 to-gray-900 bg-clip-text font-extrabold text-transparent dark:from-gray-200 dark:via-gray-50 dark:to-white',
+                'font-display bg-gradient-to-t from-gray-600 via-gray-700 to-gray-900 bg-clip-text font-extrabold text-transparent dark:from-gray-200 dark:via-gray-50 dark:to-white',
                 isJapanese
                   ? 'max-w-2xl text-4xl tracking-tight sm:text-6xl'
                   : 'max-w-2xl text-5xl tracking-tighter sm:text-7xl'
@@ -121,7 +124,7 @@ export default function HomeHeroRow() {
             </div>
             <ul
               role="list"
-              className="mt-12 flex flex-col items-start justify-start gap-x-8 gap-y-10 sm:gap-x-0 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+              className="mt-12 flex flex-row items-start justify-start gap-x-6 gap-y-10 lg:gap-y-0"
             >
               {[
                 [
@@ -136,11 +139,23 @@ export default function HomeHeroRow() {
                     link: 'https://www.latitude.sh/',
                   },
                 ],
+                [
+                  {
+                    name: 'Jito Foundation',
+                    logo: jitoFoundationLogo,
+                    link: 'https://www.jito.network/',
+                  },
+                  {
+                    name: 'Google Cloud',
+                    logo: googleCloudLogo,
+                    link: 'https://cloud.google.com/',
+                  },
+                ],
               ].map((group, groupIndex) => (
                 <li key={`HeroRowLogoCloudList${groupIndex}`}>
                   <ul
                     role="list"
-                    className="flex flex-row items-center gap-x-6 sm:gap-x-12"
+                    className="flex flex-row items-center gap-x-6"
                   >
                     {group.map((project) => (
                       <li key={project.name} className="flex">

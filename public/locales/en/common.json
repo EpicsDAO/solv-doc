@@ -14,7 +14,7 @@
   "copied": "Copied!",
   "solvInstall": "Install solv",
   "updateSettings": "Update settings",
-  "setupSolv": "Setup Solana Validator",
+  "setupSolv": "Setup",
   "thatsAll": "That's all!",
   "navs": {
     "defaultMainNav": {
@@ -56,7 +56,7 @@
   },
   "CTASectionRow": {
     "title": "The utility tool for Solana Validators",
-    "body": "solv simplifies Solana validator setup, monitoring, and the management.",
+    "body": "solv is an open-source tool designed to simplify the setup and operation of Solana validators and RPC nodes.",
     "button": "Get Started",
     "demo": "Try Demo"
   },

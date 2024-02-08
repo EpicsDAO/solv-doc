@@ -10,9 +10,9 @@ const siteConfig = {
   keywordsEN:
     'solv, Solana, Epics, DAO, Open-Source, Validator, RPC, Node, Ubuntu, Utility, Tool',
   descriptionJA:
-    'solv は、Solana バリデーター及びRPCノードのセットアップと運用を簡略化するためのオープンソース CLI ツールです。solv を使うことで、SolanaバリデーターやRPCノードのセットアップ、運用、モニタリング、アラート、アップグレード等、必須とされている業務を簡単に手間なく行うことができます。',
+    'solv は Solana バリデーター及びRPCノードのセットアップと運用を簡略化するためのオープンソースツールです。solv を使うことで、SolanaバリデーターやRPCノードのセットアップ、運用、モニタリング、アラート、アップグレード等、必須とされている業務を簡単に手間なく行うことができます。',
   descriptionEN:
-    'solv is an open-source CLI tool designed to simplify the setup and operation of Solana validators and RPC nodes. By using solv, essential tasks such as setting up, operating, monitoring, alerting, and upgrading Solana validators and RPC nodes can be performed easily and without hassle.',
+    'solv is an open-source tool designed to simplify the setup and operation of Solana validators and RPC nodes. By using solv, essential tasks such as setting up, operating, monitoring, alerting, and upgrading Solana validators and RPC nodes can be performed easily and without hassle.',
   twitterAccount: '@EpicsDAO2',
   instagramAccount: 'epics.dao',
   githubAccount: 'EpicsDAO',

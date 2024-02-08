@@ -14,7 +14,7 @@
   "copied": "コピーしました!",
   "solvInstall": "solvのインストール",
   "updateSettings": "設定の更新",
-  "setupSolv": "Solana バリデーターセットアップ",
+  "setupSolv": "セットアップ",
   "thatsAll": "完了!",
   "navs": {
     "defaultMainNav": {
@@ -56,7 +56,7 @@
   },
   "CTASectionRow": {
     "title": "Solana バリデータ向けユーティリティツール",
-    "body": "solv はSolanaバリデータのセットアップやモニタリング、及び管理業務を簡略化します。",
+    "body": "solv は Solana バリデータ及びRPCノードのセットアップと運用を簡略化するためのオープンソースツールです。",
     "button": "クイックスタート",
     "demo": "デモを試す"
   },
