@@ -6,6 +6,8 @@ description: オープンソースのSolana バリデーター向けツールsol
 
 ## Solv3 の移行手順
 
+![solv](https://storage.googleapis.com/epics-bucket/solv/assets/v3/solv3Released.jpg)
+
 Solana 公式ドキュメントの最新の要件に対応するために、solv のバージョンを Ver.3 に更新しました。
 
 ⭐️ 改善点
