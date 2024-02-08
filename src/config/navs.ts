@@ -8,6 +8,9 @@ import {
   ChartBarIcon,
   CircleStackIcon,
   ArrowPathIcon,
+  PresentationChartLineIcon,
+  AcademicCapIcon,
+  ShareIcon,
 } from '@heroicons/react/24/outline'
 
 export const defaultMainNav = [
@@ -97,7 +100,7 @@ export const docMenuNav = [
       {
         name: 'doc:menuNav.tutorial.chapter1',
         href: '/doc/tutorial/chapter1/',
-        icon: CogIcon,
+        icon: AcademicCapIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter2',
@@ -112,12 +115,12 @@ export const docMenuNav = [
       {
         name: 'doc:menuNav.tutorial.chapter4',
         href: '/doc/tutorial/chapter4/',
-        icon: ChartBarIcon,
+        icon: PresentationChartLineIcon,
       },
       {
         name: 'doc:menuNav.tutorial.chapter5',
         href: '/doc/tutorial/chapter5/',
-        icon: ChartBarIcon,
+        icon: ShareIcon,
       },
     ],
   },
