@@ -14,7 +14,6 @@ import MediaLogoRow from '@/components/pages/common/MediaLogoRow'
 import WhyOpenSourceDevelopmentRow from '@/components/pages/common/WhyOpenSourceDevelopment'
 import OurWorksRow from '@/components/pages/common/OurWorksRow'
 import SolvTutorialYouTubeRow from '@/components/pages/common/SolvTutorialYouTubeRow'
-import LatitudeCouponRow from '@/components/pages/common/LatitudeCouponRow'
 import BooksRow from '@/components/pages/common/BooksRow'
 
 const articleDirName = 'news'
@@ -40,7 +39,6 @@ export default function Home({
     <>
       <HeroRow />
       <SolvFeaturesRow />
-      <LatitudeCouponRow />
       <SolvTutorialYouTubeRow />
       <WhyOpenSourceDevelopmentRow />
       <TopNewsRow articles={articles} urls={urls} />
