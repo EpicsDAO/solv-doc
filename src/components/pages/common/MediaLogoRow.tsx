@@ -57,7 +57,7 @@ export default function MediaLogoRow() {
                 {
                   name: 'CoinPost',
                   logo: CoinPostLogo,
-                  link: 'https://coinpost.jp/?post_type=pressrelease&p=489167',
+                  link: 'https://coinpost.jp/?p=511251',
                 },
               ],
             ].map((group, groupIndex) => (
