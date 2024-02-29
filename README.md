@@ -20,7 +20,9 @@
   </a>
 </p>
 
-# solv Doc
+# solv Doc (Deprecated)
+
+Moved to the solv monorepo: https://github.com/EpicsDAO/solv
 
 Document Web Media for "solv" Solana Validator Utility Tool.
 
